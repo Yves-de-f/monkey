@@ -1,0 +1,353 @@
+/*  全站 Reset + 變數設定 */
+:root {
+  --primary-color: #525252;
+  --secondary-color: #005371;
+  --bg-color: #f4f4f4;
+  --text-color: #000;
+  --muted-text: #c4c4c4;
+  --border-color: #e5e7eb;
+
+  --dark-bg: #000;
+  --dark-text: #ffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: var(--dark-bg);
+    --text-color: var(--dark-text);
+  }
+}
+/* 預設字體大小：PC/Desktop */
+h1 { font-size: 48px; }
+h2 { font-size: 36px; }
+h3 { font-size: 28px; }
+h4 { font-size: 24px; }
+h5 { font-size: 20px; }
+h6 { font-size: 16px; }
+/* 平板字體大小調整 */
+@media (max-width: 1024px) {
+  h1 { font-size: 40px; }
+  h2 { font-size: 32px; }
+  h3 { font-size: 26px; }
+  h4 { font-size: 22px; }
+  h5 { font-size: 18px; }
+  h6 { font-size: 16px; }
+}
+/* 手機字體大小調整 */
+@media (max-width: 768px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 28px; }
+  h3 { font-size: 24px; }
+  h4 { font-size: 20px; }
+  h5 { font-size: 16px; }
+  h6 { font-size: 14px; }
+}
+@font-face {
+  font-family: "CustomFont";
+  src: url("fonts/CustomFont.ttf") format("woff2");
+  /* , */
+        /* url("fonts/my-custom-font.woff") format("woff"); */
+  font-weight: normal;
+  font-style: normal;
+}
+----------------------------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "CustomFont", system-ui, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1;
+
+  width: 98%;
+  margin: auto;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  cursor: default;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  margin: auto;
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid var(--text-color);
+  align-items: center;
+}
+.navbar-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: relative;
+}
+.navbar-text h1 {
+  font-size: 36px;
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.navbar-text small {
+  position: absolute;
+  left: 0;
+  bottom: calc((100% - 36px) / 2);
+}
+.navbar-text a {
+  position: absolute;
+  right: 0;
+  bottom: calc((100% - 36px) / 2);
+  display: flex;
+  align-items: center;
+}
+.navbar-text a::before {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: 0;
+  margin-right: 10px;
+  transition: all 1s;
+}
+.navbar-text a:hover::before {
+  width: 3rem;
+  background-color: var(--text-color);
+}
+
+/* header */
+.header-area {
+  height: 6rem;
+  display: flex;
+  align-items: end;
+}
+/* service-area */
+.main-section {
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 1rem 0;
+}
+.tab-panel {
+  display: flex;
+  height: 100%;
+  width: 150px;
+  flex: 1.2;
+}
+/* .service-tabs {
+} */
+.service-tabs li {
+  line-height: 1;
+  position: relative;
+}
+
+
+.content {
+  flex: 2;
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  display: flex;
+}
+.content-panel {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  opacity: 0;
+  transform: translateY(20px);
+  /* transition: opacity 0.5s ease-out, transform 0.5s ease-out; */
+  transition: all .5s ease-in;
+}
+.content-panel.visible {
+  opacity: 1;
+  transform: translateY(0); /* 恢復位置 */
+}
+.content-image {
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  border: 1px solid #000;
+  flex-shrink: 0
+}
+.item-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.content-item-num {
+  margin: 0 1rem;
+}
+.content-item-num h3 {
+  font-weight: 300;
+  font-size: 12px;
+}
+.content-discription {
+  margin-left: auto;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+}
+.item-title {
+  font-weight: bold;
+}
+.service-tabs li {
+  color: var(--primary-color);
+  cursor: default;
+  transition: all 1s;
+  position: relative;
+  padding-bottom: 2px;
+}
+.service-tabs li::before {
+  color: var(--primary-color);
+  content: "/ ";
+  color: #00000000;
+  transition: all 1s;
+  transform: translateX(-100%);
+  display: none;
+}
+.service-tabs li::after {
+  content: "";
+  position: absolute;
+  right: -20;
+  width: 0;
+  height: 1px;
+  top: 50%;
+  transform: translate(100% -50%) scaleX(0);
+  background-color: var(--primary-color);
+  transition: all 1s ease;
+}
+/* .service-tabs li:hover {
+  
+} */
+.service-tabs li.active {
+  color: var(--text-color);
+  transition: all 1s ease;
+}
+.service-tabs li.active::before {
+  color: var(--text-color);
+  content: "/ ";
+  display:contents
+}
+.service-tabs li.active::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  width: 50px;
+  height: 1px;
+  transform: translate(100%, -50%) scaleX(1);
+  background-color: var(--text-color);
+  transition: transform .8s ease, width 0.3s ease;
+}
+.service-tabs li:hover::before {
+  content: "/ ";
+  color: var(--primary-color);
+  transform: translateX(0);
+  display: contents;
+}
+.subservice-tabs li.active {
+  background: #444;
+  color: #fff;
+}
+/* span */
+.service-tabs li .intro-discrip {
+  position: absolute;
+  right: -50%;
+  top: 0;
+  transform: translateX(100%);
+  /* display: none; */
+  line-height: 1.3;
+  width: 100px;
+  opacity: 0;
+  /* transition: right .5s ease opacity .5s ease; */
+  transition: width 1s ease;
+}
+.service-tabs li.active .intro-discrip {
+  position: absolute;
+  right: -70%;
+  top: 0;
+  transform: translateX(100%);
+  color: var(--text-color);
+  font-size: 14px;
+  width: 200px;
+  display: block;
+  opacity: 1;
+  transition: all 1.5s ease;
+}
+
+
+
+
+
+
+
+
+
+/* item */
+.subservice-group {
+  display: flex;
+  justify-content: end;
+  height: 25vh;
+  padding-top: 1rem;
+}
+
+.subservice-tabs {
+  display: flex;
+  gap: 10px;
+  height: 100%;
+}
+/* .item-img {
+
+} */
+.product-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.placeholder-x {
+  position: relative;
+  inset: 0;
+  width: 10vw;
+  aspect-ratio: 1 / 1;
+  border: 1px solid var(--text-color);
+}
+.placeholder-x::before,
+.placeholder-x::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 140%;
+  background-color: #000000;
+  top: -20%;
+  left: 50%;
+  transform-origin: center;
+}
+.placeholder-x::before {
+  transform: rotate(45deg);
+}
+.placeholder-x::after {
+  transform: rotate(-45deg);
+}
+.item-num {
+  margin: 0 0 1rem 0;
+}
+
+
+
+
