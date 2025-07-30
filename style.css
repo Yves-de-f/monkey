@@ -82,7 +82,7 @@ html {
 
 .background {
   background-image: url("images/bg.jpg");
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
