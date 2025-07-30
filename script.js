@@ -22,6 +22,7 @@ const logoScale = document.getElementById('logo');
   // navbar變化
 const navbar = document.getElementById('navbar');
 const trigger = document.getElementById('text-box-right');
+const itemToggle = document.getElementById('navbar-list');
 
   window.addEventListener('scroll', () => {
     const triggerBottom = trigger.getBoundingClientRect().bottom;
@@ -29,9 +30,13 @@ const trigger = document.getElementById('text-box-right');
 
     if (triggerBottom <= offset) {
       navbar.classList.add('scrolled');
+      itemToggle.classList.add('scrolled');
+      logoFloat.classList.add('scrolled');
       stickyEl.dataset.wide = 'true';
     } else {
       navbar.classList.remove('scrolled');
+      itemToggle.classList.remove('scrolled');
+      logoFloat.classList.remove('scrolled');
       stickyEl.dataset.wide = 'false';
     }
   });
