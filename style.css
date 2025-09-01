@@ -155,18 +155,21 @@ li {
   bottom: calc((100% - 36px) / 2);
   color: var(--muted-text);
 }
-.navbar-text a {
+.navbar-text button {
   position: absolute;
   right: 0;
   bottom: calc((100% - 36px) / 2);
   display: flex;
   align-items: center;
   color: var(--text-color);
+  background: transparent;
+  font-family: inherit;
+  font-size: 14px;
 }
-.navbar-text a:hover {
+.navbar-text button:hover {
   color: var(--fun-color);
 }
-.navbar-text a::before {
+.navbar-text button::before {
   content: "";
   display: inline-block;
   height: 1px;
@@ -174,10 +177,32 @@ li {
   margin-right: 10px;
   transition: all 1s;
 }
-.navbar-text a:hover::before {
+.navbar-text button:hover::before {
   width: 3rem;
   background-color: var(--fun-color);
 }
+
+/* menu-toggle */
+.menu-btn-container {
+  position: sticky;
+  top: 30px;
+  right: 0;
+  margin-top: 1rem;
+  width: fit-content;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+.menu-btn {
+  padding: .1rem .3rem;
+  background: none;
+  font-family: 'CustomFont';
+}
+
 .navbar-menu {
   box-sizing: border-box;
   border-top: 2px solid var(--dark-bg-fun);
@@ -187,6 +212,12 @@ li {
   height: 0;
   overflow: hidden;
   transition: all 1s;
+}
+.navbar-menu.on {
+  height: 80px;
+}
+.navbar-menu.on ul li {
+  opacity: 1;
 }
 .navbar-menu ul {
   display: flex;
@@ -246,6 +277,11 @@ li {
 .navbar.transparent:hover {
   transform: translateY(0%);
 }
+.navbar.transparent.active-on-click {
+  transform: translateY(0%);
+}
+
+
 
 .Marquee-container {
   border-top: 2px solid var(--text-color);
@@ -287,6 +323,8 @@ li {
 .Marquee-content p {
   font-size: 14px;
 }
+
+
 
 /* hero-section */
 .hero-section {
@@ -503,7 +541,6 @@ li {
 
 /* about */
 #section2 {
-  /* background: var(--secondary-color); */
   width: 98%;
   margin: auto;
 }
@@ -606,7 +643,6 @@ li {
 }
 .service-intro {
   margin: 4rem 0 2rem 0;
-  /* border: 1px solid var(--border-color); */
   padding: 2rem 4rem;
 }
 .service-intro h2 {
@@ -616,6 +652,7 @@ li {
 .service-intro p {
   line-height: 1.5;
   text-align: center;
+  width: 700px;
 }
 .service-item-container {
   display: grid;
@@ -1054,9 +1091,14 @@ li {
   .hero-img {
     height: 500px;
   }
+
+  /* service */
   .service-intro {
     padding: 2rem 0rem;
   }
+  .service-intro p {
+    width: auto;
+}
 
   /* form */
   .form-container-bg {

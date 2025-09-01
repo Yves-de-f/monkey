@@ -5,6 +5,30 @@
 //     content.classList.toggle('shifted');
 //   }
 
+document.addEventListener('DOMContentLoaded', () => {
+  // 選擇所有具有 'toggle-switch' class 的元素
+  const toggleSwitches = document.querySelectorAll('.menu-toggle, .menu-btn');
+  const navMenu = document.getElementById('navbar-menu');
+  const navbar = document.querySelector('.navbar.transparent');
+
+  // 為每一個開關添加點擊事件監聽器
+  toggleSwitches.forEach(switchBtn => {
+    switchBtn.addEventListener('click', () => {
+      // 點擊後，切換燈泡的 class
+      navMenu.classList.toggle('on');
+
+      if (navMenu.classList.contains('on')) {
+        navbar.classList.add('active-on-click');
+      } else {
+        navbar.classList.remove('active-on-click');
+      }
+    });
+  });
+});
+
+
+
+
 const footerblock = document.getElementById('footer-info-content');
 const btnOn = document.getElementById('toggle-btn-on');
 const btnOff = document.getElementById('toggle-btn-off');
