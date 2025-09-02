@@ -1,7 +1,5 @@
-/*  全站 Reset + 變數設定 */
 :root {
   --bg-color: #e9e9e9;
-  /* --bg-color: #fefaeo; */
   --text-color: #1F2937;
   --secondary-color: #0c2dae;
   --primary-color: #e75810;
@@ -16,16 +14,16 @@
   --dark-text: #ffff;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: var(--dark-bg);
     --text-color: var(--dark-text);
   }
-}
+} */
+
 /* 預設字體大小：PC/Desktop */
 h1 { font-size: 48px; }
 h2 { font-size: 36px; }
-/* h2 { font-size: 48px; } */
 h3 { font-size: 28px; }
 h4 { font-size: 24px; }
 h5 { font-size: 20px; }
@@ -52,9 +50,9 @@ p { font-size: 18px; }
 }
 @font-face {
   font-family: "CustomFont";
-  src: url("fonts/CustomFont.ttf") format("woff2");
-  /* , */
-        /* url("fonts/my-custom-font.woff") format("woff"); */
+  src: url("fonts/CustomFont.ttf") format("woff2")
+  ,
+        url("fonts/CustomFont.ttf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -77,9 +75,6 @@ label, summary {
   box-sizing: border-box;
   color: inherit;
   font: inherit;
-  /* vertical-align: baseline; */
-  /* line-height: inherit; */
-  /* background: transparent; */
 }
 body {
   font-family: "CustomFont",'Times New Roman', Times, serif ,system-ui, sans-serif;
@@ -418,9 +413,11 @@ li {
 .hero-text-2 {
   display: flex;
   flex-direction: column;
-}
-.hero-text-2 h3 {
-  margin-bottom: 1rem;
+
+  & h3 {
+    font-size: 28px;
+    margin-bottom: 1rem;
+  }
 }
 .hero-text-3 {
   display: flex;
@@ -686,7 +683,8 @@ li {
 }
 .service-item-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  flex-wrap: nowrap;
   gap: 2rem;
   padding: 4rem 0;
 }
@@ -694,31 +692,65 @@ li {
   box-sizing: border-box;
   padding: 1rem;
   padding-bottom: 2rem;
-  /* border: 1px solid #cccccc80; */
   border: 1px solid #1f293700;
   background: #d3d3d326;
   background: #fff;
   transition: border .7s, background .7s;
 
   &:hover {
-    /* border: 1px solid #1f293722; */
     border: 1px solid #1f29378f;
-    /* background: #d3d3d365; */
   }
 
-  &:hover .service-item-detail > img {
+  &:hover .service-item-detail-img > img {
     transform: scale(1.05);
   }
+
+  & .service-item-detail a {
+    font-size: 12px;
+    margin: 0 .7rem;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
-.service-item img {
+.service-item-detail-img {
   width: 100%;
   aspect-ratio: 1 / 1;
   margin-bottom: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 1rem;
+}
+.service-item-detail-img img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  padding: 2rem;
   box-sizing: border-box;
   transition: transform 1s, filter 1s;
 }
+.service-item4,
+.service-item5 {
+
+  & .service-item-detail .service-item-detail-img {
+    padding: 0;
+  }
+
+  & .service-item-detail .service-item-detail-img img {
+    object-fit: cover;
+  }
+}
+.service-item4 {
+  
+  & .service-item-detail .service-item-detail-img img {
+    transform: scale(1.5) translateX(-4px);
+  }
+
+  &:hover .service-item-detail .service-item-detail-img img {
+    transform: scale(1.54) translateX(-4px);
+  }
+} 
 .service-item6 img {
   filter: blur(1px) grayscale(1);
 }
@@ -727,7 +759,6 @@ li {
   height: 100%;
   position: relative;
   box-sizing: border-box;
-  padding: 0 1rem;
 }
 .service-item .service-item-detail h5 {
   margin: 0 .7rem;
@@ -747,7 +778,6 @@ li {
   border: .5px solid var(--border-color);
   opacity: .5;
 }
-
 
 
 
@@ -918,8 +948,38 @@ li {
     color: var(--fun-color);
   }
 }
+.message-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: type-status 5s steps(50) 1 forwards;
+  position: relative;
 
-
+  &::before {
+    content: 'status: ';
+    animation: blink-status 1s steps(1) infinite;
+  }
+}
+@keyframes type-status {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes blink-status {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 
 
 
@@ -1079,7 +1139,13 @@ li {
 
 
 @media (max-width: 1024px) {
-
+  .service-item-container {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(230px, 1fr));
+    flex-wrap: nowrap;
+    gap: 2rem;
+    padding: 4rem 0;
+  }
 }
 
 @media (max-width: 768px) {

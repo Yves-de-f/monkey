@@ -1,4 +1,4 @@
-/*  全站 Reset + 變數設定 */
+ /*  全站 Reset + 變數設定 */
 :root {
   --primary-color: #899599;
   --secondary-color: #005371;
@@ -97,7 +97,7 @@ li {
 .navbar {
   display: flex;
   margin: auto;
-  height: 60px;
+  height: 50px;
   width: 100%;
   border-bottom: 1px solid var(--text-color);
   align-items: center;
@@ -113,6 +113,8 @@ li {
   align-items: end;
   justify-content: center;
   position: relative;
+  border-bottom: 2px solid var(--text-color);
+  margin-bottom: 10px;
 }
 .navbar-text h1 {
   font-size: 36px;
@@ -125,13 +127,13 @@ li {
 }
 .navbar-text small {
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: calc((100% - 36px) / 2);
   color: var(--muted-text);
 }
 .navbar-text a {
   position: absolute;
-  right: 0;
+  left: 0;
   bottom: calc((100% - 36px) / 2);
   display: flex;
   align-items: center;
@@ -206,7 +208,7 @@ li {
   content: '';
   background: #f349496b;
   width: 110%;
-  height:40%;
+  height: 40%;
   position: absolute;
   z-index: -1;
   right: -5%;
@@ -529,7 +531,7 @@ li {
   justify-content: space-between;
   padding-top: 4px;
   padding-bottom: 8px;
-  border-top: 1px solid var(--text-color);
+  border-top: 2px solid var(--text-color);
   position: fixed;
   bottom: 0;
   width: 98%;
@@ -539,6 +541,7 @@ li {
 .footer-social a {
   font-size: small;
 }
+
 
 
 
