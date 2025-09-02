@@ -8,7 +8,7 @@
 // 選單開關
 document.addEventListener('DOMContentLoaded', () => {
   // 選擇所有具有 'toggle-switch' class 的元素
-  const toggleSwitches = document.querySelectorAll('.menu-toggle, .menu-btn');
+  const toggleSwitches = document.querySelectorAll('.menu-toggle');
   const navMenu = document.getElementById('navbar-menu');
   const navbar = document.querySelector('.navbar.transparent');
 
