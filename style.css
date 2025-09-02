@@ -108,6 +108,7 @@ li {
   z-index: 999;
   transition: all .8s;
   box-sizing: border-box;
+  height: auto;
 }
 .navbar.transparent {
   /* background: transparent; */
@@ -120,7 +121,6 @@ li {
   width: 98%;
   border-bottom: 1px solid var(--text-color);
   align-items: center;
-  /* background: var(--bg-color); */
   padding-bottom: 4px;
   box-sizing: border-box;
 }
@@ -184,8 +184,9 @@ li {
 
 /* menu-toggle */
 .menu-btn-container {
-  position: sticky;
-  top: 30px;
+  position: fixed;
+  /* top: 30px; */
+  bottom: 40px;
   right: 0;
   margin-top: 1rem;
   width: fit-content;

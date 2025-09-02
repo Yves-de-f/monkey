@@ -5,6 +5,7 @@
 //     content.classList.toggle('shifted');
 //   }
 
+// 選單開關
 document.addEventListener('DOMContentLoaded', () => {
   // 選擇所有具有 'toggle-switch' class 的元素
   const toggleSwitches = document.querySelectorAll('.menu-toggle, .menu-btn');
