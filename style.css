@@ -674,6 +674,10 @@ li {
 .service-intro h2 {
   margin-bottom: 2rem;
   text-align: center;
+  font-size: 36px;
+}
+.service-intro h4 {
+  font-size: 24px;
 }
 .service-intro p {
   line-height: 1.5;
@@ -706,7 +710,7 @@ li {
     transform: scale(1.05);
   }
 }
-.service-item  img {
+.service-item img {
   width: 100%;
   aspect-ratio: 1 / 1;
   margin-bottom: 1rem;
