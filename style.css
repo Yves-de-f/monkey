@@ -1222,6 +1222,14 @@ li {
   .input-container {
     width: 100%;
   }
+  .form-discr {
+    margin-bottom: 2rem;
+  }
+  .form-discr p {
+    font-size: 14px;
+    padding: 1.rem;
+    line-height: 1.5;
+  }
   .input-wrapper label {
     width: 7rem;
   }
@@ -1244,6 +1252,31 @@ li {
     text-align: end;
     word-break: break-all;
   }
+
+  }
+.toggle-btn {
+  background: var(--fun-color);
+  display: flex;
+  margin-bottom: 3px;
+  padding: .1rem .3rem;
+
+  &:hover {
+    background: var(--primary-color);
+  }
+}
+#toggle-btn-on {
+  font-size: 10px;
+  height: 0.9rem;
+}
+#toggle-btn-off {
+  display: none;
+  position: absolute;
+  font-size: 10px;
+  height: 0.9rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 }
 
 
