@@ -39,10 +39,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Port       = 465;                            // SSL 端口通常是 465
         $mail->CharSet    = 'UTF-8';                        // 確保中文字元正常顯示
 
-        // 設定寄件人（這通常是你的郵箱，而不是填寫人的）
+        // 設定寄件人（你的郵箱，不是填寫人的）
         $mail->setFrom('qa355139@gmail.com', '網站聯絡表單');
         
-        // 設定回覆地址為填寫人的郵箱，這樣你就可以直接回覆給他
+        // 設定回覆地址為填寫人的郵箱給他
         $mail->addReplyTo($senderEmail, $senderName);
 
         // 新增收件人
