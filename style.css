@@ -121,7 +121,7 @@ li {
 }
 @media (hover: hover) and (pointer: fine) {
   .navbar:hover > .navbar-container > .navbar-menu {
-    height: 80px;
+    height: 95px;
   }
   .navbar:hover > .navbar-container > .navbar-menu ul li {
     opacity: 1;
@@ -243,7 +243,7 @@ li {
   transition: all 1s;
 }
 .navbar-menu.on {
-  height: 80px;
+  height: 95px;
 }
 .navbar-menu.on ul li {
   opacity: 1;
@@ -253,6 +253,7 @@ li {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  gap: 5px;
 }
 .navbar-menu ul li {
   display: flex;
@@ -297,7 +298,6 @@ li {
 .navbar-menu ul li:hover>span {
   border: 1px solid var(--dark-text-fun);
 }
-
 .navbar.transparent.active-on-click {
   transform: translateY(0%);
 }
@@ -817,21 +817,26 @@ li {
   height: 10%;
   padding: 1rem;
 }
-.form-left {
-  flex: 0 1 50%;
-  width: 100%;
-  border-radius: 8px;
-  box-sizing: border-box;
-  backdrop-filter: blur(10px);
-  background: var(--bg-color);
-}
-.form-left p {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 4rem;
+.form-right {
   display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.form-discr {
+  display: flex;
+  width: 90%;
+  box-sizing: border-box;
+  justify-content: end;
+  background: var(--fun-color);
+}
+.form-discr p {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  display: flex;
+  text-align: right;
+  line-height: 1.5;
+  margin-bottom: 1rem;
 }
 .form-box {
   box-sizing: border-box;

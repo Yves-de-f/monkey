@@ -22,10 +22,10 @@
             </div>
             <div id="navbar-menu" class="navbar-menu">
                 <ul>
-                    <li><a href="#section2">about</a><span></span></li>
-                    <li><a href="#section3">service</a><span></span></li>
-                    <li><a href="#section4">form</a><span></span></li>
-                    <li><a href="#section5">footer</a><span></span></li>
+                    <li><a href="#section2">關於正峰</a><span></span></li>
+                    <li><a href="#section3">服務項目</a><span></span></li>
+                    <li><a href="#section4">詢問表單</a><span></span></li>
+                    <li><a href="#section5">聯絡資訊</a><span></span></li>
                 </ul>
             </div>
             <!-- <div class="Marquee-container">
@@ -193,102 +193,62 @@
         <div class="form-container">
             <div class="form-container-bg">
                 <div class="form-text">form.</div>
-                <!-- <div class="form-left">
-                    <p>填寫表單，我們將有專人盡快與您聯繫，提供客製化諮詢服務。</p>
-                </div> -->
-                <form id="contactForm" class="form-grid" action="send_email.php">
-                    <div class="input-container">
-                        <div class="input-wrapper">
-                            <label for="name">姓名</label>
-                            <input type="text" id="name" name="name" class="form-box">
-                            <span class="highlight-bar"></span>
-                        </div>
-
-                        <div class="input-wrapper">
-                            <label for="phone">電話</label>
-                            <input type="text" id="phone" name="phone" class="form-box" />
-                            <span class="highlight-bar"></span>
-                        </div>
-
-                        <div class="input-wrapper">
-                            <label for="type">類型</label>
-                            <select id="type" name="type" class="form-box">
-                                <option value="" disabled selected></option>
-                                <option value="自動貼標機">自動貼標機</option>
-                                <option value="手工代貼">手工代貼</option>
-                                <option value="無塵室組裝">無塵室組裝</option>
-                                <option value="商用條碼機">商用條碼機</option>
-                            </select>
-                            <span class="highlight-bar"></span>
-                        </div>
-
-                        <div class="input-wrapper">
-                            <label for="email">電子郵件</label>
-                            <input type="email" id="email" name="email" class="form-box" />
-                            <span class="highlight-bar"></span>
-                        </div>
-
-                        <div class="input-wrapper">
-                            <label for="message">留言</label>
-                            <textarea id="message" name="message" class="form-box" rows="4" style="resize: none; padding-top: 30px;"></textarea>
-                            <span class="highlight-bar"></span>
-                        </div>
-
-                        <button class="form-box">
-                            <span class="button-text">送出</span>
-                            <span class="button-text-2">Sent as email</span>
-                        </button>
-                        <!-- <div class="status-box"> -->
-                            <div id="statusMessage" class="message-box" style="display: none;"></div>
-                        <!-- </div> -->
+                <div class="form-right">
+                    <div class="form-discr">
+                        <p>請留下您的需求與聯絡方式，我們將在最短時間內回覆，並為您提供最合適的解決方案。
+                        </p>
                     </div>
-                </form>
+                    <form id="contactForm" class="form-grid" action="send_email.php">
+                        <div class="input-container">
+                            <div class="input-wrapper">
+                                <label for="name">姓名</label>
+                                <input type="text" id="name" name="name" class="form-box">
+                                <span class="highlight-bar"></span>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="phone">電話</label>
+                                <input type="text" id="phone" name="phone" class="form-box" />
+                                <span class="highlight-bar"></span>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="type">類型</label>
+                                <select id="type" name="type" class="form-box">
+                                    <option value="" disabled selected></option>
+                                    <option value="自動貼標機">自動貼標機</option>
+                                    <option value="手工代貼">手工代貼</option>
+                                    <option value="無塵室組裝">無塵室組裝</option>
+                                    <option value="商用條碼機">商用條碼機</option>
+                                </select>
+                                <span class="highlight-bar"></span>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="email">電子郵件</label>
+                                <input type="email" id="email" name="email" class="form-box" />
+                                <span class="highlight-bar"></span>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="message">留言</label>
+                                <textarea id="message" name="message" class="form-box" rows="4" style="resize: none; padding-top: 30px;"></textarea>
+                                <span class="highlight-bar"></span>
+                            </div>
+
+                            <button class="form-box">
+                                <span class="button-text">送出</span>
+                                <span class="button-text-2">Sent as email</span>
+                            </button>
+                            <!-- <div class="status-box"> -->
+                                <div id="statusMessage" class="message-box" style="display: none;"></div>
+                            <!-- </div> -->
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
-            <!-- <form class="form-grid">
-                <div class="input-wrapper" style="grid-area: form-box1;">
-                    <label>姓名</label>
-                    <input type="text" class="form-box" />
-                    <span class="highlight-bar"></span>
-                </div>
-
-                <div class="input-wrapper" style="grid-area: form-box2;">
-                    <label>電話</label>
-                    <input type="text" class="form-box" />
-                    <span class="highlight-bar"></span>
-                </div>
-
-                <div class="input-wrapper" style="grid-area: form-box3;">
-                    <label>類型</label>
-                    <select class="form-box">
-                        <option disabled selected></option>
-                        <option>Option 1</option>
-                        <option>Option 2</option>
-                        <option>Option 3</option>
-                    </select>
-                    <span class="highlight-bar"></span>
-                </div>
-
-                <div class="input-wrapper" style="grid-area: form-box4;">
-                    <label>電子郵件</label>
-                    <input type="email" class="form-box" />
-                    <span class="highlight-bar"></span>
-                </div>
-
-                <div class="input-wrapper" style="grid-area: form-box5;">
-                    <label>留言</label>
-                    <textarea class="form-box" rows="4" style="resize: none; padding-top: 30px;"></textarea>
-                    <span class="highlight-bar"></span>
-                </div>
-
-                <button class="form-box" style="grid-area: form-box6;">
-                    <span class="button-text">Submit</span>
-                    <span class="button-text-2">Sent as email</span>
-                </button>
-            </form> -->
-
-
 
     <!-- footer-contect -->
     <div class="footer-info-content" id="footer-info-content">
@@ -303,6 +263,10 @@
                 <div class="information info-tele">
                     <p>電話</p>
                     <p>02-2243-9696</p>
+                </div>
+                <div class="information info-tele">
+                    <p>傳真</p>
+                    <p>02-2243-9797</p>
                 </div>
                 <div class="information info-e">
                     <p>電子郵件</p>
