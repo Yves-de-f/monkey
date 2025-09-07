@@ -1,22 +1,24 @@
  /*  全站 Reset + 變數設定 */
 :root {
   --primary-color: #899599;
-  --secondary-color: #005371;
+  --secondary-color: #00202c;
   --bg-color: #f4f4f4;
   --text-color: #000;
   --muted-text: #6d6d6d;
   --border-color: #e5e7eb;
+  --fun-color: #03c145;
+  --fun2-color: #e75810;
 
   --dark-bg: #000;
   --dark-text: #ffff;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: var(--dark-bg);
     --text-color: var(--dark-text);
   }
-}
+} */
 /* 預設字體大小：PC/Desktop */
 h1 { font-size: 48px; }
 h2 { font-size: 36px; }
@@ -162,7 +164,7 @@ li {
 .main-section {
   border-top: 1px solid var(--text-color);
   border-bottom: 1px solid var(--text-color);
-  height: 50vh;
+  height: auto;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -172,9 +174,8 @@ li {
   display: flex;
   height: 100%;
   width: 150px;
-  flex: 1.2;
 }
-.service-tabs li {
+.service-tabs .service-group {
   line-height: 1;
   position: relative; 
 }
@@ -182,25 +183,6 @@ li {
   margin-top: 50px;
   position: relative;
 }
-/* .tab-procedure::before {
-  content: "";
-  width: 5px;
-  height: 5px;
-  border-radius: 100%;
-  background: #000;
-  position: absolute;
-  left: -8px;
-  top: 50%;
-  transform: translateY(-50%);
-  animation: blink .8s steps(1, start) infinite;
-}
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-  0%   { opacity: 1; }
-  50%  { opacity: 0; }
-  100% { opacity: 1; }
-} */
 .tab-procedure a {
   position: relative;
 }
@@ -222,16 +204,15 @@ li {
 }
 
 
-
+/* 切換區 */
 .content {
-  flex: 2;
   height: 100%;
   width: 100%;
   margin-left: auto;
   display: flex;
 }
 .content-panel {
-  height: 100%;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -245,79 +226,105 @@ li {
   transform: translateY(0); /* 恢復位置 */
 }
 .content-image {
+  width: 600px;
+  height: 600px;
   aspect-ratio: 1 / 1;
-  height: 100%;
-  border: 1px solid #000;
-  flex-shrink: 0;
+  /* border: 1px solid #000; */
+  flex-shrink: 1;
+  padding: 1rem;
 }
 .item-image {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   overflow: hidden;
 }
-.content-item-num {
+.content-item-id-text {
   margin: 0 1rem;
 }
-.content-item-num h3 {
+.content-item-id-text h6 {
   font-weight: 300;
-  font-size: 12px;
 }
-.content-discription {
-  margin-left: auto;
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-  align-items: end;
-  gap: 10px;
-  font-size: 18px;
-}
-.item-title {
+.item-name {
   font-weight: bold;
 }
-.service-tabs {
-  width: 7rem;
+.content-discription {
+  /* margin-left: auto; */
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 500px;
+  gap: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+  flex-shrink: 1;
+
+  & p {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  & span {
+    font-weight: bold;
+    color: var(--text-color);
+  }
 }
-.service-tabs li {
-  color: var(--primary-color);
+
+/* tabs */
+.service-tabs {
+  width: 200px;
+  transition: width 1s;
+}
+.service-tabs .service-group {
+  color: var(--muted-text);
   cursor: default;
   transition: all 1s;
   position: relative;
-  padding-bottom: 2px;
+  margin-bottom: 2px;
+
+  & > .subservice-tabs {
+    display: none;
+    gap: 1px;
+    margin: .5rem 0 1rem 1rem;
+    height: 0;
+    transition: height 1s;
+    overflow: hidden;
+  }
+  &.active > .subservice-tabs {
+    display: block;
+    height: auto;
+  }
 }
-.service-tabs li::before {
-  color: var(--primary-color);
-  content: "/ ";
-  color: #00000000;
+.service-tabs .service-group::before {
+  color: var(--muted-text);
+  content: '| ';
+  /* color: #00000000; */
   transition: all 1s;
   transform: translateX(-100%);
-  display: none;
 }
-.service-tabs li::after {
-  content: "";
+/* .service-tabs .service-group::after {
+  content: '';
   position: absolute;
   right: -20;
   width: 0;
   height: 1px;
   top: 50%;
   transform: translate(100% -50%) scaleX(0);
-  background-color: var(--primary-color);
+  background-color: var(--muted-text);
   transition: all 1s ease;
-}
-.service-tabs li:hover {
+} */
+.service-tabs .service-group:hover {
   color: var(--secondary-color);
 }
-.service-tabs li.active {
+.service-tabs .service-group.active {
   color: var(--text-color);
   transition: all 1s ease;
 }
-.service-tabs li.active::before {
+.service-tabs .service-group.active::before {
   color: var(--text-color);
-  content: "/ ";
-  display:contents
+  content: '/ ';
 }
-.service-tabs li.active::after {
-  content: "";
+/* .service-tabs .service-group.active::after {
+  content: '';
   position: absolute;
   right: -5px;
   top: 50%;
@@ -326,19 +333,15 @@ li {
   transform: translate(100%, -50%) scaleX(1);
   background-color: var(--text-color);
   transition: transform .8s ease, width 1.5s ease;
+} */
+.service-tabs .service-group:hover::before {
+  content: '| ';
+  color: var(--text-color);
+  opacity: .3;
 }
-.service-tabs li:hover::before {
-  content: "/ ";
-  color: var(--primary-color);
-  transform: translateX(0);
-  display: contents;
-}
-.subservice-tabs li.active {
-  background: #444;
-  color: #fff;
-}
+
 /* span */
-.service-tabs li .intro-discrip {
+.service-tabs .service-group .intro-discrip {
   position: absolute;
   right: -20%;
   top: 0;
@@ -349,7 +352,7 @@ li {
   opacity: 0;
   pointer-events: none;
 }
-.service-tabs li.active .intro-discrip {
+.service-tabs .service-group.active .intro-discrip {
   position: absolute;
   right: -60%;
   top: 0;
@@ -366,39 +369,67 @@ li {
   margin-top: 5px;
 }
 
-
-
-
-
-
-
-
-/* item */
-.subservice-group {
-  display: flex;
-  justify-content: end;
-  height: 25vh;
-  border-bottom: 1px solid var(--text-color);
-  height: auto;
-}
-
-.subservice-tabs {
+/* subservice-tabs */
+/* .subservice-tabs {
   display: none;
-  gap: 10px;
-  height: 100%;
-  margin: 1rem 0;
+  gap: 1px;
+  height: 0;
+  margin: .5rem 0 1rem 1rem;
+  transition: height 1s;
 }
 .subservice-tabs.active {
-  display: flex; 
-}
-/* .item-img {
-
-} */
-.product-item {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto;
+} */
+.subservice-tabs .subservice-item {
+  /* cursor: pointer; */
+  display: flex;
+  height: 1.5rem;
+  align-items: center;
+  padding: 0 4px 0 2px;  
+  opacity: .7;
+  border-top: 1px dashed var(--text-color);
+  border-bottom: 1px dashed var(--text-color);
+  &:hover {
+    background: var(--dark-bg);
+    color: var(--dark-text);
+    opacity: .3;
+  }
+  
+  &.active {
+    background: var(--dark-bg);
+    color: var(--dark-text);
+    opacity: 1;
+  }
 }
+
+
+/* item images */
+.item-img-container {
+  height: fit-content;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--text-color);
+}
+.item-img-list {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: auto;
+  gap: 1rem;
+}
+.item-img-box {
+  width: 180px;
+  aspect-ratio: 1 / 1;
+  border: 1px solid var(--text-color);
+}
+.item-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 
 .placeholder-x {
   position: relative;
@@ -424,16 +455,12 @@ li {
 .placeholder-x::after {
   transform: rotate(-45deg);
 }
-.item-num {
-  /* margin: 0 0 1rem 0; */
-  position: static;
-}
+
 
 /* procedure */
 .procedure {
   display: flex;
   flex-direction: column;
-  /* height: 100vh; */
 }
 .procedure-h2 {
   height: 6rem;
@@ -444,7 +471,8 @@ li {
 .prcedure-content {
   /* border-top: 1px solid var(--text-color);
   border-bottom: 1px solid var(--text-color); */
-  height: 80vh;
+  height: 90vh;
+  /* height: fit-content; */
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -476,7 +504,7 @@ li {
 }
 .flow {
   width: 100%;
-  /* height: 6rem; */
+  /* height: 8rem; */
   display: flex;
   flex-direction: row;
   align-items: end;
@@ -517,7 +545,17 @@ li {
   letter-spacing: .8px;
   /* word-spacing: 10px; */
 }
-
+.flow-text-box .flow-detail p {
+  font-size: 20px;
+}
+.flow-img {
+  position: relative;
+}
+.flow-img img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
 
 
 
@@ -545,3 +583,16 @@ li {
 
 
 
+
+
+
+@media (max-width: 1200px) {
+  .content-image {
+    width: 500px;
+    height: 500px;
+  }
+  .content-discription {
+    width: auto;
+    font-size: 16px;
+  }
+}

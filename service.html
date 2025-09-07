@@ -29,140 +29,35 @@
     <section class="main-section">
         <section class="tab-panel">
             <ul class="service-tabs">
-                <li class="active" data-service="auto-machine">
-                    自動貼標機
-
-                    <ul class="subservice-tabs active"  data-service="auto-machine">
-                        <li class="service-item active" data-sub="LR460PC">
-                            <!-- <div class="item-img"><img class="item-img"></div> -->
-                            <div class="item-num"><caption>01 LR460PC</caption></div>
-                        </li>
-                        <li class="service-item" data-sub="NLR230">
-                            <!-- <div class="item-img"><img src="" alt=""></div> -->
-                            <div class="item-num"><caption>02 LR460PC</caption></div>
-                        </li>
-                        <li class="service-item" data-sub="LD3053">
-                            <!-- <div class="item-img"><img src="" alt=""></div> -->
-                            <div class="item-num"><caption>03 LR460PC</caption></div>
-                        </li>
-                        <li class="service-item" data-sub="A04040404">
-                            <!-- <div class="item-img"><img src="" alt=""></div> -->
-                            <div class="item-num"><caption>04 A040404</caption></div>
-                        </li>
-                        <li class="service-item" data-sub="A05050505">
-                            <!-- <div class="item-img"><img src="" alt=""></div> -->
-                            <div class="item-num"><caption>05 A050505</caption></div>
-                        </li>
-                    </ul>
-
-
-
-
-                    <span class="intro-discrip">
-                        <label for="" style="font-weight: 600;">服務特色</label>
-                        <br>
-                        <p>
-                            租賃彈性，可短期或長期合作
-                            現場安裝與操作教學
-                            提供貼標樣品測試與方案建議
-                            如需整合印刷與貼標流程，也可一併規劃
-                        </p>
-                    </span>
-                </li>
-                <li data-service="handmade">
-                    手工代貼
-                    <span class="intro-discrip">
-                        <label for="" style="font-weight: 600;">服務特色</label>
-                        <br>
-                        <p>
-                            b租賃彈性，可短期或長期合作
-                            現場安裝與操作教學
-                            提供貼標樣品測試與方案建議
-                            如需整合印刷與貼標流程，也可一併規劃
-                        </p>
-                    </span>
-                </li>
-                <li data-service="coming-soon">
-                    即將..
-                    <span class="intro-discrip">
-                        <label for="" style="font-weight: 600;margin-bottom: 10px;">服務特色</label>
-                        <br>
-                        <p>
-                            c租賃彈性，可短期或長期合作
-                            現場安裝與操作教學
-                            提供貼標樣品測試與方案建議
-                            如需整合印刷與貼標流程，也可一併規劃
-                        </p>
-                    </span>
-                </li>
+                
+                <!-- <div class="tab-procedure"><a href="#">消耗材料</a></div> -->
                 <div class="tab-procedure"><a href="#sec-procedure">租借流程</a></div>
             </ul>
         </section>
+
+        <!-- 切換區 -->
         <section class="content">
-            <!-- 切換區 -->
             <div class="content-panel">
-                    <div class="content-image">
-                        <img class="item-image" >
-                    </div>
-                    <div class="content-item-num">
-                        <h3>LR460PC</h3>
-                    </div>
-                    <div class="content-discription">
-                        <div class="item-title"><label for="">描述</label></div>
-                        <p class="item-description">產品敘述..</p>
-                    </div>
+                <div class="content-image">
+                    <img class="item-image" id="item-image">
+                </div>
+                <div class="content-item-id-text">
+                    <h6 id="content-item-id"></h6>
+                </div>
+                <div class="content-discription">
+                    <div class="item-name"><h5 id="item-name"></h5></div>
+                    <p id="item-description"></p>
+                </div>
             </div>
         </section>
     </section>
 
-    <!-- item -->
+    <!-- item images -->
     <section>
-        <!-- 子選單群組 -->
-        <div class="subservice-group">
-            <!-- 項目_自動貼標機 -->
-            <ul class="subservice-tabs active"  data-service="auto-machine">
-                <li class="service-item active" data-sub="LR460PC">
-                    <!-- <div class="item-img"><img class="item-img"></div> -->
-                    <div class="placeholder-x"></div>
-                    <div class="item-num"><caption>01 LR460PC</caption></div>
-                </li>
-                <li class="service-item" data-sub="NLR230">
-                    <!-- <div class="item-img"><img src="" alt=""></div> -->
-                    <div class="placeholder-x"></div>
-                    <div class="item-num"><caption>02 LR460PC</caption></div>
-                </li>
-                <li class="service-item" data-sub="LD3053">
-                    <!-- <div class="item-img"><img src="" alt=""></div> -->
-                    <div class="placeholder-x"></div>
-                    <div class="item-num"><caption>03 LR460PC</caption></div>
-                </li>
-                <li class="service-item" data-sub="A04040404">
-                    <!-- <div class="item-img"><img src="" alt=""></div> -->
-                    <div class="placeholder-x"></div>
-                    <div class="item-num"><caption>04 A040404</caption></div>
-                </li>
-                <li class="service-item" data-sub="A05050505">
-                    <!-- <div class="item-img"><img src="" alt=""></div> -->
-                    <div class="placeholder-x"></div>
-                    <div class="item-num"><caption>05 A050505</caption></div>
-                </li>
-            </ul>
-            <!-- 項目_手工代貼 -->
-            <ul class="subservice-tabs" data-service="handmade">
-                <li class="service-item" data-sub="B0101">
-                    <!-- <div class="item-img"><img src="" alt=""></div> -->
-                    <div class="placeholder-x"></div>
-                    <div class="item-num"><caption>01 B0101</caption></div>
-                </li>
-            </ul>
-            <!-- 項目_即將.. -->
-            <ul class="subservice-tabs">
-                <!-- <li class="service-item">
-                    <div class="item-img"><img src="" alt=""></div>
-                    <div class="placeholder-x"></div>
-                    <div class="item-num"><caption>01 LR460PC</caption></div>
-                </li> -->
-            </ul>
+        <div class="item-img-container">
+            <div class="item-img-list">
+
+            </div>
         </div>
     </section>
 
@@ -201,6 +96,9 @@
                         </div>
                         <div class="flow-step-number"><h3>4</h3></div>
                     </div>
+                    <div class="flow flow-img">
+                        <img src="images/P2/procedure.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -219,7 +117,6 @@
         </div>
     </section>
 
-    <script src="service-script.js"></script>
 </body>
 
 
