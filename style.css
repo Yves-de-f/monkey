@@ -1054,16 +1054,16 @@ li {
 }
 
 @media (max-width: 768px) {
-    .navbar-text button:hover {
-      color: initial;
-    }
-    .navbar-text button::before {
-      display: none;
-    }
-    .navbar-text button:hover::before {
-      width: 0rem;
-      background-color: initial;
-    }
+  .navbar-text button:hover {
+    color: initial;
+  }
+  .navbar-text button::before {
+    display: none;
+  }
+  .navbar-text button:hover::before {
+    width: 0rem;
+    background-color: initial;
+  }
 
   .hero-text {
     padding: 1rem;
@@ -1111,8 +1111,7 @@ li {
   }
   .service-intro p {
     width: auto;
-}
-
+  }
   /* form */
   .form-container-bg {
     aspect-ratio: auto;
@@ -1153,30 +1152,29 @@ li {
     word-break: break-all;
   }
 
-  }
-.toggle-btn {
-  background: var(--fun-color);
-  display: flex;
-  margin-bottom: 3px;
-  padding: .1rem .3rem;
+  .toggle-btn {
+    background: var(--fun-color);
+    display: flex;
+    margin-bottom: 3px;
+    padding: .1rem .3rem;
 
-  &:hover {
-    background: var(--primary-color);
+    &:hover {
+      background: var(--primary-color);
+    }
   }
-}
-#toggle-btn-on {
-  font-size: 10px;
-  height: 0.9rem;
-}
-#toggle-btn-off {
-  display: none;
-  position: absolute;
-  font-size: 10px;
-  height: 0.9rem;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
+  #toggle-btn-on {
+    font-size: 10px;
+    height: 0.9rem;
+  }
+  #toggle-btn-off {
+    display: none;
+    position: absolute;
+    font-size: 10px;
+    height: 0.9rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 
