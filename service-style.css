@@ -4,7 +4,7 @@
   --secondary-color: #00202c;
   --bg-color: #f4f4f4;
   --text-color: #000;
-  --muted-text: #6d6d6d;
+  --muted-text: #474747;
   --border-color: #e5e7eb;
   --fun-color: #03c145;
   --fun2-color: #e75810;
@@ -285,14 +285,14 @@ li {
   flex-direction: column;
   height: fit-content;
   width: 500px;
-  min-width: 400px;
+  min-width: 445px;
   gap: 10px;
-  font-size: 18px;
   line-height: 1.5;
   flex-shrink: 1;
-
+  
   & p {
-    color: rgba(0, 0, 0, 0.7);
+    color: var(--muted-text);
+    font-size: 20px;
   }
 
   & span {
@@ -718,6 +718,11 @@ li {
   .content-discription {
     min-width: auto;
     width: auto;
+
+    & p {
+      color: var(--muted-text);
+      font-size: 18px;
+    }
   }
   .item-img-list {
     gap: 1rem;
@@ -726,6 +731,9 @@ li {
   /* procedure */
   .flow-text-box .flow-detail {
     width: auto;
+  }
+.flow-text-box .flow-detail p {
+    font-size: 16px;
   }
   .flow-img img {
     width: 100%;
