@@ -732,7 +732,7 @@ li {
   .flow-text-box .flow-detail {
     width: auto;
   }
-.flow-text-box .flow-detail p {
+  .flow-text-box .flow-detail p {
     font-size: 16px;
   }
   .flow-img img {
