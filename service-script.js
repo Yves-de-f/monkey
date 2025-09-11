@@ -146,3 +146,27 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.content-panel').classList.add('visible');
     }
 });
+
+
+// gobacktotop
+// 1. 取得按鈕元素
+const scrollToTopBtn = document.getElementById("top");
+
+// 2. 監聽滾動事件
+window.onscroll = function() {
+    // 當頁面滾動超過 200px 時，顯示按鈕
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 200) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+};
+
+// 3. 監聽點擊事件
+scrollToTopBtn.addEventListener("click", function() {
+    // 讓頁面平滑地滾動回頂部
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
