@@ -28,7 +28,6 @@ h3 { font-size: 28px; }
 h4 { font-size: 24px; }
 h5 { font-size: 20px; }
 h6 { font-size: 16px; }
-p { font-size: 18px; }
 /* 平板字體大小調整 */
 @media (max-width: 1200px) {
   h1 { font-size: 40px; }
@@ -336,9 +335,20 @@ li {
   padding: .35rem .8rem;
   font-size: 16px;
   position: relative;
+  transition: transform .5s;
+
+  &:hover {
+    transform: rotateZ(5deg);
+    color: var(--muted-text);
+    border: 1px solid var(--dark-bg);
+  }
 }
 .hero-tag span:nth-child(1) {
   border: 1px solid #000;
+
+  &:hover::after {
+    width: 0;
+  }
 }
 .hero-tag span:nth-child(1)::after {
   content: '';
@@ -364,16 +374,16 @@ li {
   display: inline-block;
   margin-top: 1rem;
 
-  font-size: 5rem;
-  font-weight: 900;
+  font-size: 4rem;
+  font-weight: 600;
   transition: all 1s;
 }
 .hero-text-2 {
   display: flex;
   flex-direction: column;
-
+  
   & h3 {
-    font-size: 28px;
+    font-size: 3rem;
     margin-bottom: 1rem;
   }
 }
@@ -383,7 +393,7 @@ li {
   gap: 1rem;
 }
 .hero-btn {
-  width: 100px;
+  width: 120px;
   background: var(--dark-bg);
   box-sizing: border-box;
   color: var(--dark-text);
@@ -391,7 +401,27 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 4px;
+  /* border-radius: 4px; */
+  font-weight: 600;
+}
+.hero-btn:nth-child(1) {
+
+  &:hover {
+    color: var(--text-color);
+    background: none;
+    box-shadow: inset 0 0 0 1px var(--border-color);
+  }
+}
+.hero-btn:nth-child(2) {
+  color: var(--text-color);
+  background: none;
+  /* border: 1px solid var(--border-color); */
+  
+  &:hover {
+    color: var(--dark-text);
+    background: var(--dark-bg);
+    background: #555;
+  }
 }
 .hero-btn a {
   width: 100%;
@@ -544,7 +574,8 @@ li {
   text-align: center;
 }
 .aboutus-content-text p {
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 2.0;
   letter-spacing: 2px;
   margin-bottom: 2rem;
   width: 900px;
@@ -576,13 +607,15 @@ li {
   line-height: 2;
   text-align: center;
   width: 700px;
+  font-size: 18px;
 }
 .service-item-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  flex-wrap: nowrap;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 600px;
   gap: 2rem;
   padding: 4rem 0;
+  justify-content: center
 }
 .service-item {
   box-sizing: border-box;
@@ -602,14 +635,18 @@ li {
   }
 
   & .service-item-detail a {
-    font-size: 12px;
-    margin: 0 .7rem;
+    font-size: 16px;
+    margin: auto .7rem 0 .7rem;
     text-decoration: underline;
 
     &:hover {
       text-decoration: none;
     }
   }
+}
+.service-item:nth-child(n+4) {
+  grid-column: span 1; /* 讓第 4、5 個項目佔滿一行 */
+  justify-self: center;
 }
 .service-item-detail-img {
   width: 100%;
@@ -626,8 +663,8 @@ li {
   box-sizing: border-box;
   transition: transform 1s, filter 1s;
 }
-.service-item4,
-.service-item5 {
+.service-item6,
+.service-item7 {
 
   & .service-item-detail .service-item-detail-img {
     padding: 0;
@@ -637,7 +674,7 @@ li {
     object-fit: cover;
   }
 }
-.service-item4 {
+.service-item6 {
   
   & .service-item-detail .service-item-detail-img img {
     transform: scale(1.5) translateX(-4px);
@@ -647,18 +684,21 @@ li {
     transform: scale(1.54) translateX(-4px);
   }
 } 
-.service-item6 img {
+/* .service-item8 img {
   filter: blur(1px) grayscale(1);
-}
+} */
 .service-item .service-item-detail {
   width: 100%;
   height: 100%;
   position: relative;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 .service-item .service-item-detail h5 {
-  margin: 0 .7rem;
-  margin-bottom: 1rem;
+  margin: 0 .7rem 1rem .7rem;
+  font-size: 18px;
+  line-height: 1.5;
 }
 .service-item .service-item-detail p {
   line-height: 1.5;
@@ -894,7 +934,7 @@ li {
   box-sizing: border-box;
   background: var(--muted-text);
   color: var(--fun-color);
-  height: 50vh;
+  /* height: 600px; */
   border: 2px solid var(--fun-color);
   display: flex;
   flex-direction: column;
@@ -902,19 +942,50 @@ li {
   transform: translate(-50%, 150%);
   transition: transform 1s;
   z-index: 998;
+  justify-content: space-between;
+  overflow-y: scroll;
+
+  /* 整個 scrollbar */
+  &::-webkit-scrollbar {
+    width: 3px; /* 垂直捲動條寬度 */
+    height: 12px; /* 水平捲動條高度 */
+  }
+
+  /* 滑軌背景 */
+  &::-webkit-scrollbar-track {
+    /* background: #f0f0f0; */
+    /* border-radius: 6px; */
+  }
+
+  /* 拖曳滑塊 */
+  &::-webkit-scrollbar-thumb {
+    /* background-color: #e75810; */
+    /* border-radius: 6px; */
+    /* border: 1px solid #03c145;  */
+    /* 內邊距效果 */
+  }
+
+  /* 滑塊 hover 效果 */
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
 }
 .footer-info-content.active {
   transform: translate(-50%, 0);
 }
 .footer-LOGO {
-  margin-bottom: 1rem;
-  font-size: 28px;
+  margin-bottom: 2rem;
+  padding: .3rem 0;
+  font-size: 7rem;
+  font-weight: 700;
 }
 .foorter-block {
   display: flex;
-  justify-content: space-between;
-  height: 100%;
   width: 100%;
+  gap: 1rem;
+  border-top: 1px solid var(--fun-color);
+  padding: .5rem 0;
 }
 .footer-mark {
   background: var(--primary-color);
@@ -929,22 +1000,35 @@ li {
 .footer-info {
   display: grid;
   grid-template-rows: repeat(4);
-  grid-template-columns: minmax(auto, auto);
-  gap: 1rem;
+  grid-template-columns: 100%;
+  gap: .5rem;
   justify-content: end;
   align-self: self-end;
   width: 100%;
+  height: 100%;
+  border-left: 1px solid var(--fun-color);
+  padding-left: .5rem;
+  box-sizing: border-box;
 }
 .information {
   display: flex;
   flex-direction: row;
   align-items: end;
-  gap: 1rem;
   letter-spacing: 2px;
   padding-bottom: 2px;
-  border-bottom: 1px solid var(--fun-color);
   width: 100%;
   box-sizing: border-box;
+}
+.information a {
+  width: 100%;
+  font-size: 18px;
+  line-height: 1.1;
+  /* transition: background .2s, color .2s; */
+
+  &:hover {
+    color: var(--dark-bg);
+    background: var(--primary-color);
+  }
 }
 .information p {
   text-wrap: wrap;
@@ -953,8 +1037,14 @@ li {
   user-select: auto;
   -webkit-user-select: auto;
   -moz-user-select: all;
+  font-size: 18px;
   line-height: 1.1;
   color: var(--fun-color);
+  
+  &::selection {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+  }
 }
 .information p:nth-child(1) {
   text-wrap: nowrap;
@@ -967,10 +1057,21 @@ li {
     font-weight: bold;
     letter-spacing: 0;
   }
+
+  & span::selection {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+  }
 }
 .info-time p {
-  line-height: 1.3;
+  line-height: 1.1;
 }
+/* .info-top {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  border-bottom: 0.5px dotted var(--dark-bg);
+} */
 
 /* footer-buttom */
 .footer {
@@ -1051,6 +1152,7 @@ li {
 }
 
 @media (max-width: 768px) {
+
   .navbar-text button:hover {
     color: initial;
   }
@@ -1062,12 +1164,16 @@ li {
     background-color: initial;
   }
 
+  /* hero */
+  #section1 {
+    background: linear-gradient(180deg, var(--bg-color) 60%, #e9e9e900);
+    padding-top: 1rem;
+  }
   .hero-text {
     padding: 1rem;
-    margin: 1rem 10px 0 10px;
+    margin: 0 10px;
   }
   .hero-tag {
-    /* flex-direction: column; */
     gap: .5rem;
     width: fit-content;
     flex-wrap: wrap;
@@ -1089,6 +1195,9 @@ li {
     font-size: 3rem;
     font-weight: 900;
   }
+  .hero-text-2 h3 {
+    font-size: 2rem;
+  }
   .hero-btns {
     margin: 4rem 0 2rem 0;
     display: flex;
@@ -1098,8 +1207,27 @@ li {
   .hero-btn {
     flex: 1;
   }
+  .hero-btn:nth-child(2) {
+    color: var(--text-color);
+    background: none;
+    border: 1px solid var(--border-color);
+    
+    &:hover {
+      color: var(--dark-text);
+      background: var(--dark-bg);
+    }
+  }
   .hero-img {
     height: 500px;
+  }
+
+  /* about */
+  .aboutus-content-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    width: auto;
   }
 
   /* service */
@@ -1137,12 +1265,30 @@ li {
   .footer-info-content {
     padding: 1rem .8rem;
   }
+  .footer-LOGO {
+    font-size: 3.5rem;
+  }
   .foorter-block {
     flex-direction: column;
+    border-top: none;
   }
   .footer-info {
+    gap: .5rem;
     width: 100%;
-    grid-template-columns: minmax(auto, 90%);
+    border-left: none;
+    border-top: 1px solid var(--fun-color);
+    padding-left: 0;
+    padding-top: .5rem;
+  }
+  .information {
+    height: auto;
+  }
+  .information a,
+  .information p {
+    line-height: 1;
+    letter-spacing: 1px;
+    padding: 0;
+    font-size: 16px;
   }
   .information p:nth-child(2) {
     text-align: end;

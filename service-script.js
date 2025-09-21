@@ -1,3 +1,9 @@
+// 讀取 URL 參數
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const serviceTabsContainer = document.querySelector('.service-tabs');
 
@@ -58,6 +64,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // ✅ 初始化第一個服務與第一個子服務
             handleServiceClick(data[0].id, data);
+
+            // ✅ 根據 URL 參數選取服務
+            const urlServiceId = getQueryParam('serviceId');
+            const urlSubItemId = getQueryParam('subItemId');
+
+            const defaultServiceId = urlServiceId || data[0].id;
+            handleServiceClick(defaultServiceId, data);
+
+            if (urlSubItemId) {
+                // 等待 DOM 完成後再執行
+                setTimeout(() => {
+                    handleSubItemClick(urlSubItemId, data);
+                }, 0);
+            }
         })
         .catch(error => {
             console.error('There has been a problem with your fetch operation:', error);
@@ -170,3 +190,29 @@ scrollToTopBtn.addEventListener("click", function() {
         behavior: "smooth"
     });
 });
+
+
+
+
+
+function switchVideo(videoKey, btn) {
+    const videoMap = {
+        video1: "gU-Ok5AnB-U?si=p8j4BBK-ylwpm0rs",
+        video2: "影片ID2",
+        video3: "影片ID3",
+        video4: "影片ID3",
+        video5: "影片ID3"
+    };
+
+    document.getElementById("videoFrame").src = `https://www.youtube.com/embed/${videoMap[videoKey]}`;
+  
+    // 移除所有按鈕的 active 類別
+    document.querySelectorAll(".video-selector button").forEach(b => b.classList.remove("active"));
+    // 加上目前按下的按鈕 active 類別
+    btn.classList.add("active");
+
+}
+// 預設啟用第一個按鈕
+document.querySelector(".video-selector button").classList.add("active");
+document.getElementById("videoFrame").src = `images/IMG_5775.mov`;
+
