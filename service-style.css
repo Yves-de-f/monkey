@@ -503,8 +503,11 @@ li {
   font-size: 16px;
   font-family: inherit;
   color: var(--muted-text);
-  background: none;
   opacity: 0.5;
+  background: none;
+  border: 1px solid #00000000;
+  border-radius: 999px;
+  padding: 0 .4rem;
 
   &:hover {
     opacity: 0.9;
@@ -514,6 +517,9 @@ li {
   color: var(--text-color);
   opacity: 1;
   background: var(--fun-color);
+  border: 1px solid var(--dark-bg);
+  border-radius: 999px;
+  padding: 0 .5rem;
 }
 
 
