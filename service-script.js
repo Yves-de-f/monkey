@@ -216,3 +216,24 @@ function switchVideo(videoKey, btn) {
 document.querySelector(".video-selector button").classList.add("active");
 document.getElementById("videoFrame").src = `images/IMG_5775.mov`;
 
+// faq
+function toggleAnswer(el) {
+    const contentAns = el.querySelector('.a:nth-of-type(2)');
+    const currentHeight = window.getComputedStyle(contentAns).height;
+
+    if (currentHeight === '0px') {
+      contentAns.style.height = contentAns.scrollHeight + 'px';
+      contentAns.style.opacity = '1';
+    } else {
+      contentAns.style.height = '0px';
+      contentAns.style.opacity = '0';
+    }
+  }
+
+
+// 初始化收起
+window.onload = () => {
+    const contentAns = querySelector('.faq-content .a:nth-of-type(2)');
+    contentAns.style.height = '0px';
+    contentAns.style.opacity = '0';
+};

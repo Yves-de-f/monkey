@@ -711,28 +711,35 @@ li.slide > span {
 .faq > li{
   padding: 1rem 3rem;
 
-  &:hover > div > p:nth-child(2) {
-    height: 30px;
+  &:hover > .faq-content > .a:nth-of-type(2) {
+    /* height: 30px;
     overflow: hidden;
-    opacity: 1;
+    opacity: 1; */
   }
 }
 .faq > li > .q {
   margin-bottom: .5rem;
 }
-.faq > li > div {
+.faq > li > .faq-content {
+  display: flex;
+  flex-direction: column;
 }
-.faq > li > div > .a {
+.faq > li > .faq-content > .a {
   color: var(--muted-text);
   line-height: 1.5;
   font-size: 20px;
 }
-.faq > li > div > p:nth-child(2) {
+.faq > li > .faq-content > .a:nth-of-type(2) {
   height: 0;
-  overflow: hidden;
   opacity: 0;
+  overflow: hidden;
   transition: height 1s, opacity 1.7s;
 }
+/* .faq-content span {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--text-color);
+} */
 
 
 
