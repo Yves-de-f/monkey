@@ -415,7 +415,7 @@ li {
 .hero-btn:nth-child(2) {
   color: var(--text-color);
   background: none;
-  /* border: 1px solid var(--border-color); */
+  border: 1px solid #5858581d;
   
   &:hover {
     color: var(--dark-text);

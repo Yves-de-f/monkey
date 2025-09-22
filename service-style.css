@@ -118,7 +118,7 @@ li {
   border-bottom: 2px solid var(--text-color);
   margin-bottom: 10px;
 }
-.navbar-text h1 {
+.navbar-text > header > h1 {
   font-size: 36px;
   background-color: var(--dark-bg);
   color: var(--dark-text);
@@ -128,13 +128,13 @@ li {
   transform: translate(-50%, -50%);
   font-weight: 400;
 }
-.navbar-text small {
+.navbar-text > small {
   position: absolute;
   right: 0;
   bottom: calc((100% - 36px) / 2);
   color: var(--muted-text);
 }
-.navbar-text a {
+.navbar-text > a:not(header a) {
   position: absolute;
   left: 0;
   bottom: calc((100% - 36px) / 2);
@@ -146,7 +146,7 @@ li {
   padding: .2rem .3rem;
   line-height: 1;
 }
-.navbar-text a::before {
+.navbar-text > a::before {
   content: "";
   display: inline-block;
   height: 1px;
@@ -154,7 +154,7 @@ li {
   margin-right: 10px;
   transition: all 1s;
 }
-.navbar-text a:hover::before {
+.navbar-text > a:hover::before {
   width: 3rem;
   background-color: var(--text-color);
 }
@@ -521,8 +521,6 @@ li {
   border-radius: 999px;
   padding: 0 .5rem;
 }
-
-
 .v-spans {
   display: flex;
   justify-content: center;
@@ -715,7 +713,9 @@ li.slide > span {
   /* border: 1px solid var(--text-color); */
 }
 .faq > li{
-  padding: 1rem 3rem;
+  padding: 1rem 1rem;
+  /* width: 80%; */
+  margin: auto;
 
   &:hover > .faq-content > .a:nth-of-type(2) {
     /* height: 30px;
@@ -739,14 +739,39 @@ li.slide > span {
   height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: height 1s, opacity 1.7s;
+  transition: height .7s, opacity 1.7s;
 }
-/* .faq-content span {
-  width: 8px;
-  height: 8px;
-  border: 1px solid var(--text-color);
-} */
+.qa > .faq-content{
+  position: relative;
+}
+@media (hover: hover) and (pointer: fine) {
+  .qa:hover > .faq-content > svg {
+    animation: shake 1s ease 3;
+  }
+}
+@keyframes shake {
+  33% {
+    transform: rotateZ(-135deg) scale(1.5) translate(-2px, -2px);
+  }
 
+  /* 66% {
+    transform: rotateZ(-135deg) scale(1.5) translate(2px, 2px);
+  } */
+
+  100% {
+    transform: rotateZ(-135deg) scale(1.5) translateY(0px, 0);
+  }
+}
+.arrow-icon {
+  position: absolute;
+  right: 0;
+  bottom: -1rem;
+  transform: rotateZ(-135deg)  scale(1.5);
+  transition: all 1s;
+}
+.arrow-icon.open {
+  transform: rotateZ(-90deg) scale(1.5);
+}
 
 
 /* footer-contect */
@@ -921,6 +946,9 @@ li.slide > span {
   }
 
   /* video */
+  .video-container {
+    width: 100%;
+  }
   .video {
 
   }
@@ -950,9 +978,11 @@ li.slide > span {
     margin: auto auto 4rem auto;
   }
   .faq > li{
-    padding: 1rem 0;
-  }
 
+  }
+  .faq > li > .faq-content .a {
+    font-size: 18px;
+  }
 
 
   /* footer-content */

@@ -220,13 +220,16 @@ document.getElementById("videoFrame").src = `images/IMG_5775.mov`;
 function toggleAnswer(el) {
     const contentAns = el.querySelector('.a:nth-of-type(2)');
     const currentHeight = window.getComputedStyle(contentAns).height;
+    const arrowIcon = el.querySelector('.arrow-icon');
 
     if (currentHeight === '0px') {
       contentAns.style.height = contentAns.scrollHeight + 'px';
       contentAns.style.opacity = '1';
+      arrowIcon.classList.add("open");
     } else {
-      contentAns.style.height = '0px';
-      contentAns.style.opacity = '0';
+        contentAns.style.height = '0px';
+        contentAns.style.opacity = '0';
+        arrowIcon.classList.remove("open");
     }
   }
 
@@ -236,4 +239,5 @@ window.onload = () => {
     const contentAns = querySelector('.faq-content .a:nth-of-type(2)');
     contentAns.style.height = '0px';
     contentAns.style.opacity = '0';
+    arrowIcon.classList.remove("open");
 };
