@@ -24,7 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 const listItem = document.createElement('li');
                 listItem.className = `service-group ${isActive}`;
                 listItem.setAttribute('data-service', service.id);
-                listItem.textContent = service.name;
+                // listItem.textContent = service.name;
+
+                const titleSpan = document.createElement('span');
+                titleSpan.className = 'service-tab-text';
+                titleSpan.textContent = service.name;
+                listItem.appendChild(titleSpan);
+
 
                 // 建立子服務清單 <ul>
                 const subItemsList = document.createElement('ul');
@@ -50,10 +56,19 @@ document.addEventListener('DOMContentLoaded', () => {
             // 監聽點擊事件
             serviceTabsContainer.addEventListener('click', (e) => {
                 // 點擊服務
-                if (e.target.tagName === 'LI' && e.target.hasAttribute('data-service')) {
-                    const serviceId = e.target.getAttribute('data-service');
-                    handleServiceClick(serviceId, data);
+                // if (e.target.tagName === 'LI' && e.target.hasAttribute('data-service')) {
+                //     const serviceId = e.target.getAttribute('data-service');
+                //     handleServiceClick(serviceId, data);
+                // }
+                // 點擊服務標題
+                if (e.target.classList.contains('service-tab-text')) {
+                    const parentLi = e.target.closest('.service-group');
+                    if (parentLi && parentLi.hasAttribute('data-service')) {
+                        const serviceId = parentLi.getAttribute('data-service');
+                        handleServiceClick(serviceId, data);
+                    }
                 }
+
 
                 // 點擊子服務
                 if (e.target.tagName === 'LI' && e.target.hasAttribute('data-subitem-id')) {
