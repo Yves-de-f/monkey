@@ -612,7 +612,7 @@ li {
 .service-item-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 600px;
+  grid-template-rows: auto auto;
   gap: 2rem;
   padding: 4rem 0;
   justify-content: center
@@ -622,12 +622,13 @@ li {
   padding: 1rem;
   padding-bottom: 2rem;
   border: 1px solid #1f293700;
-  background: #d3d3d326;
-  background: #fff;
+  background: #f0efef;
+  /* background: #d3d3d357; */
   transition: border .7s, background .7s;
 
   &:hover {
-    border: 1px solid #1f29378f;
+    background: #e3e3e386;
+    border: 1px solid #1f293740;
   }
 
   &:hover .service-item-detail-img > img {
@@ -704,9 +705,8 @@ li {
   line-height: 1.5;
   margin: 0 .7rem;
   margin-bottom: 2rem;
-  color: var(--border-color);
+  color: var(--text-color);
   letter-spacing: 1px;
-  opacity: .8;
 }
 .divider {
   box-shadow: none;

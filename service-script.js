@@ -207,9 +207,7 @@ scrollToTopBtn.addEventListener("click", function() {
 });
 
 
-
-
-
+// 影片切換
 function switchVideo(videoKey, btn) {
     const videoMap = {
         video1: "gU-Ok5AnB-U?si=p8j4BBK-ylwpm0rs",
@@ -227,9 +225,11 @@ function switchVideo(videoKey, btn) {
     btn.classList.add("active");
 
 }
+
 // 預設啟用第一個按鈕
 document.querySelector(".video-selector button").classList.add("active");
 document.getElementById("videoFrame").src = `images/IMG_5775.mov`;
+
 
 // faq
 function toggleAnswer(el) {
@@ -247,7 +247,6 @@ function toggleAnswer(el) {
         arrowIcon.classList.remove("open");
     }
   }
-
 
 // 初始化收起
 window.onload = () => {

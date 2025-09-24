@@ -178,9 +178,11 @@ li {
 }
 .tab-panel {
   display: flex;
+  box-sizing: border-box;
   height: 100%;
-  /* width: 170px; */
   width: fit-content;
+  padding-right: 12px;
+  margin-right: 10px;
 }
 .service-tabs .service-group {
   line-height: 1;
@@ -312,6 +314,7 @@ li {
 /* tabs */
 .service-tabs {
   width: 200px;
+  box-sizing: border-box;
   transition: width 1s;
 }
 .service-tab-text {
@@ -324,7 +327,7 @@ li {
   /* border: 1px solid var(--text-color); */
   /* border: 1px solid #00000000; */
   /* border-radius: 2px; */
-  padding: 3px;
+  padding: 4px;
   color: #474747;
 }
 .service-tabs .service-group {
@@ -336,6 +339,7 @@ li {
   /* padding-bottom: 4px; */
   transform: translateX(12px);
   /* border-bottom: .5px solid #9e9e9e9e; */
+
 
   & > .subservice-tabs {
     display: none;
@@ -537,7 +541,7 @@ li {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 1rem 0 .5rem 0;
+  padding: .5rem 0 .5rem 0;
   border-bottom: 1px solid var(--text-color);
 }
 .video-selector button {
@@ -547,20 +551,42 @@ li {
   opacity: 0.5;
   background: none;
   border: 1px solid #00000000;
-  border-radius: 999px;
-  padding: 0 .4rem;
+  border-radius: 0px;
+  position: relative;
 
   &:hover {
-    opacity: 0.9;
+    opacity: 0.7;
+    text-shadow: 0 2px 2px #cbcbcb;
+    color: #cbcbcb46;
   }
+}
+.video-selector button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: #00000000;
+  transform: translateY(100%);
+  transition: all 1s;
+  opacity: 0;
 }
 .video-selector button.active {
   color: var(--text-color);
   opacity: 1;
-  background: var(--fun-color);
-  border: 1px solid var(--dark-bg);
-  border-radius: 999px;
-  padding: 0 .5rem;
+  text-shadow: 0 2px 8px #474747;
+}
+.video-selector button.active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--text-color);
+  box-shadow: 0 2px 8px 4px #cbcbcb;
+  opacity: 1;
 }
 .v-spans {
   display: flex;
@@ -756,7 +782,9 @@ li.slide > span {
 .faq > li{
   padding: 1rem 1rem;
   /* width: 80%; */
-  margin: auto;
+  margin: 1rem auto;
+  /* border: 1px solid var(--text-color); */
+  background: #cbcbcb3b;
 
   &:hover > .faq-content > .a:nth-of-type(2) {
     /* height: 30px;
@@ -764,16 +792,25 @@ li.slide > span {
     opacity: 1; */
   }
 }
+.faq > hr {
+  all: unset;
+  border-top: 1px dotted var(--text-color);
+  margin: 1rem 0;
+  /* display: flex; */
+}
 .faq > li > .q {
-  display: inline-block;
+  /* display: inline-block; */
   box-sizing: border-box;
   margin-bottom: .5rem;
   /* border: ; */
   color: var(--dark-text);
-  background: var(--muted-text);
+  background: var(--dark-bg);
   border-radius: 999px;
   padding: 6px 16px;
-  font-size: 18px;
+  font-size: 20px;
+  display: flex;
+  width: fit-content;
+  align-items: center;
 }
 .faq > li > .faq-content {
   display: flex;
@@ -784,6 +821,10 @@ li.slide > span {
   color: var(--muted-text);
   line-height: 1.5;
   font-size: 20px;
+
+  & > span {
+    font-weight: bold;
+  }
 }
 .faq > li > .faq-content > .a:nth-of-type(2) {
   height: 0;
@@ -795,13 +836,16 @@ li.slide > span {
   position: relative;
 }
 @media (hover: hover) and (pointer: fine) {
-  .qa:hover > .faq-content > svg {
+  /* .qa:hover > .faq-content > svg {
+    animation: shake 1s ease 3;
+  } */
+  .qa:hover > .q > svg  {
     animation: shake 1s ease 3;
   }
 }
 @keyframes shake {
-  33% {
-    transform: rotateZ(-135deg) scale(1.5) translate(-2px, -2px);
+  50% {
+    transform: rotateZ(-135deg) scale(1.2) translate(-1px, -1px);
   }
 
   /* 66% {
@@ -809,18 +853,22 @@ li.slide > span {
   } */
 
   100% {
-    transform: rotateZ(-135deg) scale(1.5) translateY(0px, 0);
+    transform: rotateZ(-135deg) scale(1.2) translate(0px, 0px);
   }
 }
 .arrow-icon {
-  position: absolute;
-  right: 0;
-  bottom: -1rem;
-  transform: rotateZ(-135deg)  scale(1.5);
+  transform: rotateZ(-135deg) scale(1.2);
   transition: all 1s;
+  color: var(--text-color);
+  /* color: var(--dark-text); */
+  margin-left: 1rem;
+  background: var(--bg-color);
+  /* background: var(--fun-color); */
+  border-radius: 50%;
+  border: 1.5px solid var(--border-color);
 }
 .arrow-icon.open {
-  transform: rotateZ(-90deg) scale(1.5);
+  transform: rotateZ(-90deg) scale(1.2);
 }
 
 
@@ -1032,6 +1080,11 @@ li.slide > span {
   }
   .faq > li > .faq-content .a {
     font-size: 18px;
+
+    & > span {
+      display: block;
+      font-weight: bold;
+    }
   }
 
 
