@@ -544,7 +544,7 @@ li {
   padding: .5rem 0 .5rem 0;
   border-bottom: 1px solid var(--text-color);
 }
-.video-selector button {
+.video-selector .video-btn {
   font-size: 16px;
   font-family: inherit;
   color: var(--muted-text);
@@ -555,12 +555,12 @@ li {
   position: relative;
 
   &:hover {
-    opacity: 0.7;
-    text-shadow: 0 2px 2px #cbcbcb;
-    color: #cbcbcb46;
+    opacity: .7;
+    text-shadow: 0 2px 2px #4747472a;
+    color: #474747;
   }
 }
-.video-selector button::after {
+.video-selector .video-btn::after {
   content: '';
   display: block;
   position: absolute;
@@ -572,12 +572,12 @@ li {
   transition: all 1s;
   opacity: 0;
 }
-.video-selector button.active {
+.video-selector .video-btn.active {
   color: var(--text-color);
   opacity: 1;
-  text-shadow: 0 2px 8px #474747;
+  text-shadow: 0 2px 20px #474747;
 }
-.video-selector button.active::after {
+.video-selector .video-btn.active::after {
   content: '';
   display: block;
   position: absolute;
@@ -588,6 +588,26 @@ li {
   box-shadow: 0 2px 8px 4px #cbcbcb;
   opacity: 1;
 }
+.butlink {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  border-left: 2px dotted #000;
+  padding-left: 1rem;
+  margin-left: 1rem;
+  text-shadow: 0 2px 8px #4747470c;
+  transition: .7s;
+}
+.butlink:hover {
+  text-shadow: 0 2px 8px #474747;
+}
+/* .butlink::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 100%;
+  background: var(--text-color);
+} */
 .v-spans {
   display: flex;
   justify-content: center;

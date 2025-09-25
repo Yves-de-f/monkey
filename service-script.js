@@ -210,7 +210,7 @@ scrollToTopBtn.addEventListener("click", function() {
 // 影片切換
 function switchVideo(videoKey, btn) {
     const videoMap = {
-        video1: "gU-Ok5AnB-U?si=p8j4BBK-ylwpm0rs",
+        video1: "gRAffEwoKfU?si=r4UGtLt2qh0TQsvW",
         video2: "影片ID2",
         video3: "影片ID3",
         video4: "影片ID3",
@@ -223,12 +223,12 @@ function switchVideo(videoKey, btn) {
     document.querySelectorAll(".video-selector button").forEach(b => b.classList.remove("active"));
     // 加上目前按下的按鈕 active 類別
     btn.classList.add("active");
-
 }
 
 // 預設啟用第一個按鈕
 document.querySelector(".video-selector button").classList.add("active");
-document.getElementById("videoFrame").src = `images/IMG_5775.mov`;
+// document.getElementById("videoFrame").src = `images/IMG_5775.mov`;
+document.getElementById("videoFrame").src = `https://www.youtube.com/embed/gRAffEwoKfU?si=r4UGtLt2qh0TQsvW`;
 
 
 // faq

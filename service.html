@@ -71,11 +71,12 @@
             <div class="video-h2"><h2>VVVVVVVVVV</h2></div>
             <div class="video-block">
                 <div class="video-selector">
-                    <button onclick="switchVideo('video1', this)">自動雙面貼標機</button>
-                    <button onclick="switchVideo('video2', this)">自動雙面貼標機</button>
-                    <button onclick="switchVideo('video3', this)">自動雙面貼標機</button>
-                    <button onclick="switchVideo('video4', this)">自動雙面貼標機</button>
-                    <button onclick="switchVideo('video5', this)">自動雙面貼標機</button>
+                    <button class="video-btn" onclick="switchVideo('video1', this)">自動雙面貼標機</button>
+                    <button class="video-btn" onclick="switchVideo('video2', this)">自動雙面貼標機</button>
+                    <button class="video-btn" onclick="switchVideo('video3', this)">自動雙面貼標機</button>
+                    <button class="video-btn" onclick="switchVideo('video4', this)">自動雙面貼標機</button>
+                    <button class="video-btn" onclick="switchVideo('video5', this)">自動雙面貼標機</button>
+                    <a class="butlink" href="https://drive.google.com/drive/folders/1I1k5XVMrrVXyxaNopTPE_oIj_bUPLwXL?usp=sharing" target="_blank">貼紙</a>
                 </div>
                 <div class="v-spans">
                     <span class="v-span span-left"></span>
@@ -168,7 +169,9 @@
                 <hr noshade="noshade">
                 <li class="qa" onclick="toggleAnswer(this)">
                     <span class="q">貼標過程吃標帶
-                        
+                        <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </span>
                     <div class="faq-content">
                         <p class="a"><span>問題​原因：</span>​貼紙​厚度​或​捲料​張力​與機器​不符。</p>
@@ -177,7 +180,11 @@
                 </li>
                 <hr noshade="noshade">
                 <li class="qa" onclick="toggleAnswer(this)">
-                    <span class="q">感應器讀不到標記</span>
+                    <span class="q">感應器讀不到標記
+                        <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
                     <div class="faq-content">
                         <p class="a"><span>問題​原因：</span>​貼紙底​紙​顏色​或​透明標​籤​造成​光電​感應器​讀取​失誤。</p>
                         <p class="a"><span>解決​方式：</span>​提供​專用​感應器​或​更換​適合​的​底紙​顏色，​確保機器​正常​運作。​</p>
@@ -194,18 +201,18 @@
             <div class="foorter-block">
                 <!-- <div class="footer-mark">mark</div> -->
                 <div class="footer-info">
-                    <div class="information info-addr">
+                    <!-- <div class="information info-addr">
                         <p>地址</p>
                         <p>新北市中和區橋和路88號8樓之1</p>
-                    </div>
+                    </div> -->
                     <div class="information info-tele">
                         <p>電話</p>
                         <p>02-2243-9696</p>
                     </div>
-                    <div class="information info-tele">
+                    <!-- <div class="information info-tele">
                         <p>傳真</p>
                         <p>02-2243-9797</p>
-                    </div>
+                    </div> -->
                     <div class="information info-e">
                         <p>電子郵件</p>
                         <p>koyu.a88<span>@msa.hinet.net</span>
