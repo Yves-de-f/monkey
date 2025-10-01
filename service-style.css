@@ -178,6 +178,7 @@ li {
 }
 .tab-panel {
   display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   height: 100%;
   width: fit-content;
@@ -188,14 +189,14 @@ li {
   line-height: 1;
   position: relative; 
 }
-.tab-procedure {
+.tab-form-link {
   margin-top: 50px;
   position: relative;
 }
-.tab-procedure a {
+.tab-form-link a {
   position: relative;
 }
-.tab-procedure a::before {
+.tab-form-link a::before {
   content: '';
   background: #f349496b;
   width: 110%;
@@ -208,7 +209,7 @@ li {
   transition: all .5s;
   filter: blur(.9px);
 }
-.tab-procedure a:hover::before {
+.tab-form-link a:hover::before {
   width: 0;
 }
 
@@ -218,7 +219,6 @@ li {
   height: 100%;
   width: 100%;
   display: flex;
-
 }
 .content-panel {
   height: auto;
@@ -900,7 +900,37 @@ li.slide > span {
 .arrow-icon.open {
   transform: rotateZ(-90deg) scale(1.2);
 }
-
+.faq-video-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-self: center;
+  width: 1000px;
+  resize: horizontal;
+  /* aspect-ratio: 16 / 9; */
+  height: 0;
+  margin: 1rem 0;
+  gap: 1rem;
+  overflow: hidden;
+  transition: height 2s, opacity 2s;
+}
+.faq-video-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  /* height: 100%; */
+  object-fit: cover;
+  border: 1px solid var(--dark-bg);
+}
+.faq-video-container img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  /* height: 100%; */
+  object-fit: cover;
+  border: 1px solid var(--dark-bg);
+}
+/* .faq-video-container.open {
+  height: fit-content;
+} */
 
 /* footer-contect */
 .footer-info-content {
@@ -1087,6 +1117,7 @@ li.slide > span {
   .content-img-block {
     margin: 2rem 1rem;
     box-sizing: border-box;
+    width: auto;
   }
   .content-image {
     width: 100%;
@@ -1157,11 +1188,13 @@ li.slide > span {
       font-weight: bold;
     }
   }
+  .faq-video-container {
+    width: 100%;
+  }
 
 
   /* footer-content */
   .footer-info-content {
-    height: 400px;
     padding: 1rem .8rem;
   }
   .foorter-block {
@@ -1170,10 +1203,12 @@ li.slide > span {
   }
   .footer-info {
     width: 100%;
-    grid-template-columns: minmax(auto, 90%);
   }
   .information p:nth-child(2) {
     text-align: end;
     word-break: break-all;
+  }
+  .footer-info:nth-last-of-type(2) .information-r .information > a{
+    /* text-align: end; */
   }
 }

@@ -234,24 +234,39 @@ document.getElementById("videoFrame").src = `https://www.youtube.com/embed/gRAff
 // faq
 function toggleAnswer(el) {
     const contentAns = el.querySelector('.a:nth-of-type(2)');
+    const contentMedia = el.querySelector('.faq-video-container');
     const currentHeight = window.getComputedStyle(contentAns).height;
+    const mediaHeight = window.getComputedStyle(contentMedia).height;
     const arrowIcon = el.querySelector('.arrow-icon');
 
     if (currentHeight === '0px') {
-      contentAns.style.height = contentAns.scrollHeight + 'px';
-      contentAns.style.opacity = '1';
-      arrowIcon.classList.add("open");
+        contentAns.style.height = contentAns.scrollHeight + 'px';
+        contentAns.style.opacity = '1';
+        arrowIcon.classList.add("open");
+        // contentMedia.classList.add("open");
     } else {
         contentAns.style.height = '0px';
         contentAns.style.opacity = '0';
         arrowIcon.classList.remove("open");
+        // contentMedia.classList.remove("open");
+    }
+
+    if (mediaHeight === '0px') {
+        contentMedia.style.height = contentMedia.scrollHeight + 'px';
+        contentMedia.style.opacity = '1';
+    } else {
+        contentMedia.style.height = '0px';
+        contentMedia.style.opacity = '0';
     }
   }
 
 // 初始化收起
 window.onload = () => {
     const contentAns = querySelector('.faq-content .a:nth-of-type(2)');
+    const contentMedia = querySelector('.faq-video-container');
     contentAns.style.height = '0px';
     contentAns.style.opacity = '0';
+    contentMedia.style.height = '0px';
+    contentMedia.style.opacity = '0';
     arrowIcon.classList.remove("open");
 };
