@@ -206,7 +206,7 @@
         "id": "cleanroom",
         "name": "無塵室代工組​裝服務",
         "image": "images/P2/cleanroom.png",
-        "images":["images/P2/cleanroom-small-0.png", "images/P2/cleanroom-small-1.png"],
+        "images":["images/P2/cleanroom-small-0.png", "images/P2/cleanroom-small-1.png", "images/P2/cleanroom-small-2.png"],
         "description": ["正​峰擁​有​ C​lass​ ​100,000 ​等​級無​塵室，​並通過​ ISO 9000​ 品質​管理​認證，​能​提供​專業​的​無塵室​組裝與​加工代​工服務。​",
                         "我​們​深知​許多​產品​在​製程​或​包裝​階段，​對潔​淨度​有​嚴格​要求，​但​並非​每​家​公司​都​能​自建無​塵室。​正峰​提供​的​一​站​式​代​工​方案，​讓您​只​需將零組件​交給​我​們，​即可​在​符合國​際​標準​的​無塵室​環境​中​完成​組裝​與​檢測，​確保產​品品​質​穩定​可靠。​",
                         "",

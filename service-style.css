@@ -595,29 +595,47 @@ li {
   box-shadow: 0 2px 8px 4px #cbcbcb;
   opacity: 1;
 }
-.butlink {
+.sticker-btn {
   display: flex;
   align-items: center;
+  font-family: inherit;
+  font-size: 16px;
   color: var(--text-color);
-  border-left: 2px dotted #949292;
+  border-left: 1px dashed #949292;
   padding-left: 1rem;
   margin-left: 2rem;
-  text-shadow: 0 2px 8px #4747470c;
   text-shadow: 0 2px 10px #474747;
   transition: .7s;
-  height: 1.2rem;
+  background: none;
+  position: relative;
+  box-sizing: border-box;
 }
-.butlink:hover {
-  text-shadow: 0 2px 8px #474747;
+.sticker-btn:hover {
   text-shadow: 0 2px 8px #03c145;
 }
-/* .butlink::before {
+.sticker-btn::after {
   content: '';
   display: block;
-  width: 1px;
-  height: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: #00000000;
+  transform: translateY(100%);
+  transition: all 1s;
+  opacity: 0;
+}
+.sticker-btn.active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 2rem;
+  height: 1px;
   background: var(--text-color);
-} */
+  box-shadow: 0 2px 8px 4px #cbcbcb;
+  opacity: 1;
+}
 .v-spans {
   display: flex;
   justify-content: center;
@@ -640,6 +658,12 @@ li {
   height: 100%;
   object-fit: cover;
   border: none;
+}
+.video-container #stickerFrame {
+  display: none;
+  width: 100%;
+  height: 100%;
+
 }
 
 
@@ -907,30 +931,23 @@ li.slide > span {
   align-self: center;
   width: 1000px;
   resize: horizontal;
-  /* aspect-ratio: 16 / 9; */
   height: 0;
-  margin: 1rem 0;
   gap: 1rem;
   overflow: hidden;
-  transition: height 2s, opacity 2s;
+  transition: height .7s ease, opacity 2s ease, margin 1s;
 }
 .faq-video-container iframe {
   width: 100%;
   aspect-ratio: 16 / 9;
-  /* height: 100%; */
   object-fit: cover;
   border: 1px solid var(--dark-bg);
 }
 .faq-video-container img {
   width: 100%;
   aspect-ratio: 16 / 9;
-  /* height: 100%; */
   object-fit: cover;
   border: 1px solid var(--dark-bg);
 }
-/* .faq-video-container.open {
-  height: fit-content;
-} */
 
 /* footer-contect */
 .footer-info-content {
@@ -1023,17 +1040,19 @@ li.slide > span {
 .footer-info:nth-last-of-type(2) {
   display: flex;
   align-items: end;
+  justify-content: start;
+  gap: 1rem;
 }
 .footer-info:nth-last-of-type(2) .information-l {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  /* flex: 1; */
   gap: .5rem;
 }
 .footer-info:nth-last-of-type(2) .information-r {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  /* flex: 1; */
   gap: .5rem;
 }
 

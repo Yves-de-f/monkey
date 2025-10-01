@@ -217,6 +217,10 @@ function switchVideo(videoKey, btn) {
         video5: "影片ID3"
     };
 
+    // 顯示影片區域，隱藏自訂內容
+    document.getElementById("videoFrame").style.display = "block";
+    document.getElementById("stickerFrame").style.display = "none";
+
     document.getElementById("videoFrame").src = `https://www.youtube.com/embed/${videoMap[videoKey]}`;
   
     // 移除所有按鈕的 active 類別
@@ -224,49 +228,71 @@ function switchVideo(videoKey, btn) {
     // 加上目前按下的按鈕 active 類別
     btn.classList.add("active");
 }
+function switchToSticker(btn) {
+    // 隱藏影片區域，顯示自訂內容
+    document.getElementById("videoFrame").style.display = "none";
+    document.getElementById("stickerFrame").style.display = "block";
+
+    // 移除所有按鈕的 active 類別
+    document.querySelectorAll(".video-selector button").forEach(b => b.classList.remove("active"));
+    // 加上目前按下的按鈕 active 類別
+    btn.classList.add("active");
+}
+
 
 // 預設啟用第一個按鈕
 document.querySelector(".video-selector button").classList.add("active");
-// document.getElementById("videoFrame").src = `images/IMG_5775.mov`;
 document.getElementById("videoFrame").src = `https://www.youtube.com/embed/gRAffEwoKfU?si=r4UGtLt2qh0TQsvW`;
 
 
 // faq
 function toggleAnswer(el) {
-    const contentAns = el.querySelector('.a:nth-of-type(2)');
-    const contentMedia = el.querySelector('.faq-video-container');
-    const currentHeight = window.getComputedStyle(contentAns).height;
-    const mediaHeight = window.getComputedStyle(contentMedia).height;
+    const answerText = el.querySelector('.a:nth-of-type(2)');
+    const videoContainer = el.querySelector('.faq-video-container');
     const arrowIcon = el.querySelector('.arrow-icon');
 
-    if (currentHeight === '0px') {
-        contentAns.style.height = contentAns.scrollHeight + 'px';
-        contentAns.style.opacity = '1';
+    const isClosed = window.getComputedStyle(answerText).height === '0px';
+
+    if (isClosed) {
+        // 展開文字與影片
+        answerText.style.height = answerText.scrollHeight + 'px';
+        answerText.style.opacity = '1';
+
+        videoContainer.style.height = videoContainer.scrollHeight + 'px';
+        videoContainer.style.opacity = '1';
+        videoContainer.style.margin = '1rem 0';
+
         arrowIcon.classList.add("open");
-        // contentMedia.classList.add("open");
     } else {
-        contentAns.style.height = '0px';
-        contentAns.style.opacity = '0';
+        // 收起文字與影片
+        answerText.style.height = '0px';
+        answerText.style.opacity = '0';
+
+        videoContainer.style.height = '0px';
+        videoContainer.style.opacity = '0';
+        videoContainer.style.margin = '0';
+
+
         arrowIcon.classList.remove("open");
-        // contentMedia.classList.remove("open");
     }
+}
 
-    if (mediaHeight === '0px') {
-        contentMedia.style.height = contentMedia.scrollHeight + 'px';
-        contentMedia.style.opacity = '1';
-    } else {
-        contentMedia.style.height = '0px';
-        contentMedia.style.opacity = '0';
-    }
-  }
-
-// 初始化收起
 window.onload = () => {
-    const contentAns = querySelector('.faq-content .a:nth-of-type(2)');
-    const contentMedia = querySelector('.faq-video-container');
-    contentAns.style.height = '0px';
-    contentAns.style.opacity = '0';
-    contentMedia.style.height = '0px';
-    contentMedia.style.opacity = '0';
-    arrowIcon.classList.remove("open");
+    const answerText = document.querySelector('.faq-content .a:nth-of-type(2)');
+    const videoContainer = document.querySelector('.faq-video-container');
+    const arrowIcon = document.querySelector('.arrow-icon');
+
+    if (answerText) {
+        answerText.style.height = '0px';
+        answerText.style.opacity = '0';
+    }
+
+    if (videoContainer) {
+        videoContainer.style.height = '0px';
+        videoContainer.style.opacity = '0';
+    }
+
+    if (arrowIcon) {
+        arrowIcon.classList.remove("open");
+    }
 };
