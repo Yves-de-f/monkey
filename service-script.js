@@ -211,10 +211,10 @@ scrollToTopBtn.addEventListener("click", function() {
 function switchVideo(videoKey, btn) {
     const videoMap = {
         video1: "gRAffEwoKfU?si=r4UGtLt2qh0TQsvW",
-        video2: "影片ID2",
-        video3: "影片ID3",
-        video4: "影片ID3",
-        video5: "影片ID3"
+        video2: "xL2MU-OGyS0?si=_uKUrmGS0kq0c-nF",
+        video3: "u9hr383x1hs?si=ijIVQKA2leZPjtF8",
+        video4: "YK1a8MZpZhQ?si=ryhvTyBhzWtuqk3F",
+        video5: "h9lRIaKDYsk?si=v7vGkTpQPdx41F8i"
     };
 
     // 顯示影片區域，隱藏自訂內容
@@ -231,14 +231,13 @@ function switchVideo(videoKey, btn) {
 function switchToSticker(btn) {
     // 隱藏影片區域，顯示自訂內容
     document.getElementById("videoFrame").style.display = "none";
-    document.getElementById("stickerFrame").style.display = "block";
+    document.getElementById("stickerFrame").style.display = "grid";
 
     // 移除所有按鈕的 active 類別
     document.querySelectorAll(".video-selector button").forEach(b => b.classList.remove("active"));
     // 加上目前按下的按鈕 active 類別
     btn.classList.add("active");
 }
-
 
 // 預設啟用第一個按鈕
 document.querySelector(".video-selector button").classList.add("active");
@@ -271,7 +270,6 @@ function toggleAnswer(el) {
         videoContainer.style.height = '0px';
         videoContainer.style.opacity = '0';
         videoContainer.style.margin = '0';
-
 
         arrowIcon.classList.remove("open");
     }
