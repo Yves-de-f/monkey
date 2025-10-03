@@ -332,8 +332,8 @@ li {
   text-align: center;
   align-items: center;
   justify-content: center;
-  padding: .35rem .8rem;
-  font-size: 16px;
+  padding: .4rem 1.2rem;
+  font-size: 18px;
   position: relative;
   transition: transform .5s;
 
@@ -375,6 +375,7 @@ li {
   margin-top: 1rem;
 
   font-size: 4rem;
+  font-size: 80px;
   font-weight: 600;
   transition: all 1s;
 }
@@ -384,6 +385,7 @@ li {
   
   & h3 {
     font-size: 3rem;
+    font-size: 56px;
     margin-bottom: 1rem;
   }
 }
@@ -393,7 +395,7 @@ li {
   gap: 1rem;
 }
 .hero-btn {
-  width: 120px;
+  width: 150px;
   background: var(--dark-bg);
   box-sizing: border-box;
   color: var(--dark-text);
@@ -428,6 +430,7 @@ li {
   height: 100%;
   padding: .5rem 2rem;
   text-align: center;
+  font-size: 20px;
 }
 .hero-img {
   width: 100%;
@@ -463,6 +466,7 @@ li {
   border-radius: 999px;
   /* filter: invert(1) blur(50px); */
   background: linear-gradient(90deg, rgb(11, 19, 178) 35%, var(--primary-color));
+  /* background: linear-gradient(90deg, rgb(36, 161, 234) 35%, var(--primary-color)); */
   opacity: .8;
   left: 50%;
   top: 50%;
@@ -474,21 +478,29 @@ li {
 @keyframes color-change {
   0%, 100% {
     filter: invert(0) blur(50px);
+    /* filter: blur(50px); */
+    background: linear-gradient(90deg, rgb(45, 114, 225) 35%, var(--primary-color));
     width: 800px;
     height: 400px;
   }
   25% {
     filter: invert(.5) blur(50px);
+    /* filter: blur(50px); */
+    /* background: linear-gradient(90deg, rgb(224, 234, 36) 50%, rgb(36, 161, 234) 35%); */
     width: 1050px;
     height: 40px;
   }
   50% {
     filter: invert(1) blur(50px);
+    /* filter: blur(50px); */
+    /* background: linear-gradient(90deg, rgb(36, 161, 234) 35%, var(--primary-color)); */
     width: 800px;
     height: 400px;
   }
   75% {
     filter: invert(.5) blur(50px);
+    /* filter: blur(50px); */
+    /* background: linear-gradient(90deg, rgb(224, 234, 36) 50%, rgb(36, 161, 234) 35%); */
     width: 1050px;
     height: 40px;
   }
@@ -620,7 +632,7 @@ li {
 .service-item {
   width: 100%;
   box-sizing: border-box;
-  padding: 1rem;
+  padding: 1rem 1rem 1.5rem 1rem;
   border: 1px solid #1f293700;
   background: #f0efef;
   /* background: #d3d3d357; */

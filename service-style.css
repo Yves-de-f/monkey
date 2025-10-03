@@ -240,10 +240,10 @@ li {
   flex-shrink: 1;
   align-self: flex-start;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
 }
 .content-image {
-  max-width: 600px;
+  max-width: 700px;
   width: 100%;
   height: auto;
 }
@@ -309,7 +309,7 @@ li {
   
   & p {
     color: var(--muted-text);
-    font-size: 20px;
+    font-size: 18px;
   }
 
   & span {
@@ -675,19 +675,27 @@ li {
   height: 100%;
   border-radius: 8px;
   overflow: hidden;
-  /* border: 1px solid var(--primary-color); */
+  /* border: 1px solid var(--primary-color);  */
 }
 .sticker-frame-box[style*="grid-area: sticker-box-1;"] {
   border: 1px solid var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #cbcbcb46;
+  /* background: #cbcbcb46; */
+  background: var(--fun-color);
+  /* color: var(--); */
+  box-sizing: border-box;
+
+  padding: 1.2rem;
 }
 .sticker-frame-box[style*="grid-area: sticker-box-1;"] > span {
   /* width: 100%;
   height: 100%; */
   /* background: #ccc; */
+
+  line-height: 1.5;
+
 }
 .sticker-frame-box[style*="grid-area: sticker-box-2;"] > img {
   width: 100%;
@@ -769,6 +777,8 @@ li {
   width: fit-content;
   padding: 3px 6px;
   opacity: 0;
+  display: block;
+  opacity: 1;
 }
 .sticker-frame-box[style*="grid-area: sticker-box-6;"] > a:hover::after {
   display: block;
@@ -1282,7 +1292,7 @@ li.slide > span {
   .video-container #stickerFrame {
     height: auto;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 200px);
+    grid-template-rows: auto repeat(3, 150px);
     grid-template-areas: "sticker-box-1 sticker-box-1"
     "sticker-box-2 sticker-box-3"
     "sticker-box-5 sticker-box-4"
@@ -1291,6 +1301,8 @@ li.slide > span {
   }
   .sticker-frame-box[style*="grid-area: sticker-box-6;"] {
     align-items: start;
+    width: auto;
+    height: 100%;
   }
 
 
