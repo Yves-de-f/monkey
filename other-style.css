@@ -4,7 +4,7 @@
   --secondary-color: #00202c;
   --bg-color: #f4f4f4;
   --text-color: #000;
-  --muted-text: #454545;
+  --muted-text: #474747;
   --border-color: #e5e7eb;
   --fun-color: #03c145;
   --fun2-color: #e75810;
@@ -13,12 +13,12 @@
   --dark-text: #ffff;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: var(--dark-bg);
     --text-color: var(--dark-text);
   }
-}
+} */
 /* 預設字體大小：PC/Desktop */
 h1 { font-size: 48px; }
 h2 { font-size: 36px; }
@@ -113,13 +113,13 @@ li {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: center;
   position: relative;
   border-bottom: 2px solid var(--text-color);
   margin-bottom: 10px;
 }
-.navbar-text h1 {
+.navbar-text > header > h1 {
   font-size: 36px;
   background-color: var(--dark-bg);
   color: var(--dark-text);
@@ -129,13 +129,13 @@ li {
   transform: translate(-50%, -50%);
   font-weight: 400;
 }
-.navbar-text small {
+.navbar-text > small {
   position: absolute;
   right: 0;
   bottom: calc((100% - 36px) / 2);
   color: var(--muted-text);
 }
-.navbar-text a {
+.navbar-text > a {
   position: absolute;
   left: 0;
   bottom: calc((100% - 36px) / 2);
@@ -147,7 +147,7 @@ li {
   padding: .2rem .3rem;
   line-height: 1;
 }
-.navbar-text a::before {
+.navbar-text > a::before {
   content: "";
   display: inline-block;
   height: 1px;
@@ -155,7 +155,7 @@ li {
   margin-right: 10px;
   transition: all 1s;
 }
-.navbar-text a:hover::before {
+.navbar-text > a:hover::before {
   width: 3rem;
   background-color: var(--text-color);
 }
