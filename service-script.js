@@ -254,43 +254,58 @@ function toggleAnswer(el) {
 
     if (isClosed) {
         // 展開文字與影片
-        answerText.style.height = answerText.scrollHeight + 'px';
-        answerText.style.opacity = '1';
+        if (answerText) {
+            answerText.style.height = answerText.scrollHeight + 'px';
+            answerText.style.opacity = '1';
+        }
 
-        videoContainer.style.height = videoContainer.scrollHeight + 'px';
-        videoContainer.style.opacity = '1';
-        videoContainer.style.margin = '1rem 0';
+        if (videoContainer) {
+            videoContainer.style.height = videoContainer.scrollHeight + 'px';
+            videoContainer.style.opacity = '1';
+            videoContainer.style.margin = '1rem 0';
+        }
 
-        arrowIcon.classList.add("open");
+        if (arrowIcon) {
+            arrowIcon.classList.add("open");
+        }
     } else {
         // 收起文字與影片
-        answerText.style.height = '0px';
-        answerText.style.opacity = '0';
+        if (answerText) {
+            answerText.style.height = '0px';
+            answerText.style.opacity = '0';
+        }
 
-        videoContainer.style.height = '0px';
-        videoContainer.style.opacity = '0';
-        videoContainer.style.margin = '0';
+        if (videoContainer) {
+            videoContainer.style.height = '0px';
+            videoContainer.style.opacity = '0';
+            videoContainer.style.margin = '0';
+        }
 
-        arrowIcon.classList.remove("open");
+        if (arrowIcon) {
+            arrowIcon.classList.remove("open");
+        }
     }
 }
 
 window.onload = () => {
-    const answerText = document.querySelector('.faq-content .a:nth-of-type(2)');
-    const videoContainer = document.querySelector('.faq-video-container');
-    const arrowIcon = document.querySelector('.arrow-icon');
+    document.querySelectorAll('.qa').forEach(el => {
+        const answerText = el.querySelector('.a:nth-of-type(2)');
+        const videoContainer = el.querySelector('.faq-video-container');
+        const arrowIcon = el.querySelector('.arrow-icon');
 
-    if (answerText) {
-        answerText.style.height = '0px';
-        answerText.style.opacity = '0';
-    }
+        if (answerText) {
+            answerText.style.height = '0px';
+            answerText.style.opacity = '0';
+        }
 
-    if (videoContainer) {
-        videoContainer.style.height = '0px';
-        videoContainer.style.opacity = '0';
-    }
+        if (videoContainer) {
+            videoContainer.style.height = '0px';
+            videoContainer.style.opacity = '0';
+            videoContainer.style.margin = '0';
+        }
 
-    if (arrowIcon) {
-        arrowIcon.classList.remove("open");
-    }
+        if (arrowIcon) {
+            arrowIcon.classList.remove("open");
+        }
+    });
 };

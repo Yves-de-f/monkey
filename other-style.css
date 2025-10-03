@@ -1,0 +1,352 @@
+ /*  全站 Reset + 變數設定 */
+:root {
+  --primary-color: #899599;
+  --secondary-color: #00202c;
+  --bg-color: #f4f4f4;
+  --text-color: #000;
+  --muted-text: #454545;
+  --border-color: #e5e7eb;
+  --fun-color: #03c145;
+  --fun2-color: #e75810;
+
+  --dark-bg: #000;
+  --dark-text: #ffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: var(--dark-bg);
+    --text-color: var(--dark-text);
+  }
+}
+/* 預設字體大小：PC/Desktop */
+h1 { font-size: 48px; }
+h2 { font-size: 36px; }
+h3 { font-size: 28px; }
+h4 { font-size: 24px; }
+h5 { font-size: 20px; }
+h6 { font-size: 16px; }
+p { font-size: 20px; }
+/* 平板字體大小調整 */
+@media (max-width: 1200px) {
+  h1 { font-size: 40px; }
+  h2 { font-size: 32px; }
+  h3 { font-size: 26px; }
+  h4 { font-size: 22px; }
+  h5 { font-size: 18px; }
+  h6 { font-size: 16px; }
+}
+/* 手機字體大小調整 */
+@media (max-width: 768px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 28px; }
+  h3 { font-size: 24px; }
+  h4 { font-size: 20px; }
+  h5 { font-size: 16px; }
+  h6 { font-size: 14px; }
+}
+@font-face {
+  font-family: "CustomFont";
+  src: url("fonts/CustomFont.ttf") format("woff2");
+  /* , */
+        /* url("fonts/my-custom-font.woff") format("woff"); */
+  font-weight: normal;
+  font-style: normal;
+}
+----------------------------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, h6,
+p, a, blockquote, pre,
+dl, dd, ol, ul, figure,
+form, fieldset, legend,
+input, textarea, select, button,
+label, summary {
+  margin: 0;
+  padding: 0;
+  /* font: inherit; */
+  /* vertical-align: baseline; */
+  color: inherit;
+  text-decoration: none;
+  /* line-height: inherit; */
+  /* background: transparent; */
+  border: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "CustomFont", system-ui, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1;
+
+  width: 98%;
+  margin: auto;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  /* cursor: default; */
+  cursor: crosshair;
+}
+html {
+  scroll-behavior: smooth;
+}
+li {
+  list-style: none;
+}
+/* navbar */
+.navbar {
+  display: flex;
+  margin: auto;
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid var(--text-color);
+  align-items: center;
+  background: var(--bg-color);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.navbar-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: relative;
+  border-bottom: 2px solid var(--text-color);
+  margin-bottom: 10px;
+}
+.navbar-text h1 {
+  font-size: 36px;
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 400;
+}
+.navbar-text small {
+  position: absolute;
+  right: 0;
+  bottom: calc((100% - 36px) / 2);
+  color: var(--muted-text);
+}
+.navbar-text a {
+  position: absolute;
+  left: 0;
+  bottom: calc((100% - 36px) / 2);
+  display: flex;
+  align-items: center;
+  background: var(--fun2-color);
+  border-radius: 999px;
+  border: 1px solid var(--text-color);
+  padding: .2rem .3rem;
+  line-height: 1;
+}
+.navbar-text a::before {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: 0;
+  margin-right: 10px;
+  transition: all 1s;
+}
+.navbar-text a:hover::before {
+  width: 3rem;
+  background-color: var(--text-color);
+}
+
+/* header */
+.header-area {
+  /* height: 6rem; */
+  display: flex;
+  align-items: end;
+}
+
+
+
+
+
+
+/* main */
+.page{
+  max-width: 1300px;
+  margin: 3rem auto;
+  /* border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.04); */
+  background: var(--bg-color);
+}
+.container {      
+  padding: 60px 80px;
+}
+
+/* Hero 區 */
+.hero {
+  margin-bottom: 8rem;
+}
+.hero-inner {
+  display: grid;                     /* 使用 CSS Grid 排版 */
+  grid-template-columns: 1.2fr 1fr;  /* 分成兩欄，左邊比例 1.2，右邊比例 1 */
+  gap: 32px;                         /* 兩欄之間的間距 32px */
+  align-items: center;               /* 垂直方向置中對齊 */
+  padding: 30px 10px;                   /* 上下內距 30px，左右 10 */
+}
+.hero h3 {  
+  line-height: 1.5;
+  font-size: 40px;
+  width: 80%;
+  margin-bottom: 2rem;
+}
+.hero p {
+  color: var(--muted-text);
+  line-height: 2.0;
+  /* width: 80%; */
+}
+
+/* 為什麼選擇我們 */
+.why {
+  padding: 8px;
+  background: var(--fun2-color);
+  margin-bottom: 10rem;
+  border-radius: 8px;
+  display: flex;
+}
+.why-inner {
+  box-sizing: border-box;
+  display: flex;
+  padding: 2rem;
+  border: 1px solid var(--text-color);
+  width: 100%;
+  height: 100%;
+}
+.why h3 {
+  margin-bottom: 1rem;
+}
+.why p {
+  line-height: 2.0;
+}
+.why img {
+  width: 300px;
+  height: auto;
+  margin-left: auto;
+  object-fit: contain;
+}
+
+/* FAQ */
+.faq-container {
+  margin-bottom: 6rem;
+}
+.badge{
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--text-color);
+}
+ul.slides {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+  list-style: none;
+  margin-bottom: 4rem;
+  box-sizing: border-box;
+}
+li.slide {
+  width: 100%;
+  flex-basis: 0% 1 0%;
+  /* flex: 1; */
+  background: #cbcbcb;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  border: 1px solid var(--text-color);
+}
+li.slide > img {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+li.slide > span {
+
+}
+/* .slide:nth-of-type(1) {
+  background-color: #F2E205;
+}
+.slide:nth-of-type(2) {
+  background-color: #F25C05;
+  left: 100%;
+}
+.slide:nth-of-type(3) {
+  background-color: #495F8C;
+  left: 200%;
+} */
+
+
+
+
+
+/* footer */
+.footer-container {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding-top: 4px;
+  padding-bottom: 8px;
+  border-top: 2px solid var(--text-color);
+  position: fixed;
+  bottom: 0;
+  width: 98%;
+  z-index: 999;
+  background: var(--bg-color);
+}
+.footer-social a {
+  font-size: small;
+}
+
+
+
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 780px) {
+  p { font-size: 16px; }
+  /* main */
+  .page{
+    margin: 2rem auto;
+  }
+  .container {      
+    padding: 1rem;
+  }
+
+  /* Hero 區 */
+  .hero h3 {  
+    font-size: 30px;
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .hero p {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* 為什麼選擇我們 */
+  .why-inner {
+    flex-direction: column;
+  }
+  .why h3 {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .why p {
+    line-height: 2.0;
+    text-align: center;
+  }
+}
