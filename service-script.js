@@ -240,8 +240,13 @@ function switchToSticker(btn) {
 }
 
 // 預設啟用第一個按鈕
-document.querySelector(".video-selector button").classList.add("active");
-document.getElementById("videoFrame").src = `https://www.youtube.com/embed/gRAffEwoKfU?si=r4UGtLt2qh0TQsvW`;
+// document.querySelector(".video-selector button").classList.add("active");
+// document.getElementById("videoFrame").src = `https://www.youtube.com/embed/gRAffEwoKfU?si=r4UGtLt2qh0TQsvW`;
+const stickerBtn = document.querySelector('.video-selector button.sticker-btn');
+if (stickerBtn) {
+    switchToSticker(stickerBtn);
+}
+
 
 
 // faq

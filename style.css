@@ -479,7 +479,7 @@ li {
   0%, 100% {
     filter: invert(0) blur(50px);
     /* filter: blur(50px); */
-    background: linear-gradient(90deg, rgb(45, 114, 225) 35%, var(--primary-color));
+    background: linear-gradient(90deg, rgb(73, 128, 247) 35%, var(--primary-color));
     width: 800px;
     height: 400px;
   }
