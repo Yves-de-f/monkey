@@ -343,14 +343,14 @@ li {
     border: 1px solid var(--dark-bg);
   }
 }
-.hero-tag span:nth-child(1) {
+.hero-tag span:nth-child(-n+2) {
   border: 1px solid #000;
 
   &:hover::after {
     width: 0;
   }
 }
-.hero-tag span:nth-child(1)::after {
+.hero-tag span:nth-child(-n+2)::after {
   content: '';
   background: #f349496b;
   width: 90%;

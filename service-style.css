@@ -327,7 +327,7 @@ li {
   box-sizing: border-box;
   line-height: 1;
   font-size: 18px;
-  /* font-weight: bold; */
+  font-weight: bold;
   background: #cbcbcb3b;
   /* border: 1px solid var(--text-color); */
   /* border: 1px solid #00000000; */
