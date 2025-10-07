@@ -271,6 +271,7 @@ li {
 }
 .item-img-box {
   max-width: 180px;
+  flex: 1;
   aspect-ratio: 1 / 1;
   border: 1px solid var(--text-color);
 }
@@ -553,12 +554,12 @@ li {
   font-size: 16px;
   font-family: inherit;
   color: var(--muted-text);
-  opacity: 0.5;
   background: none;
-  border: 1px solid #00000000;
-  border-radius: 0px;
+  border: 1px solid var(--text-color);
+  border-radius: 999px;
   position: relative;
   transition: all 1s;
+  padding: 0 12px;
 
   &:hover {
     opacity: .7;
@@ -566,7 +567,7 @@ li {
     color: #474747;
   }
 }
-.video-selector .video-btn::after {
+/* .video-selector .video-btn::after {
   content: '';
   display: block;
   position: absolute;
@@ -577,13 +578,16 @@ li {
   transform: translateY(100%);
   transition: all 1s;
   opacity: 0;
-}
+} */
 .video-selector .video-btn.active {
   color: var(--text-color);
-  opacity: 1;
   text-shadow: 0 2px 20px #474747;
+  border-radius: 999px;
+  border: 1px solid var(--text-color);
+  background: #03c146c5;
+  /* text-shadow: 0 2px 8px #; */
 }
-.video-selector .video-btn.active::after {
+/* .video-selector .video-btn.active::after {
   content: '';
   display: block;
   position: absolute;
@@ -593,7 +597,7 @@ li {
   background: var(--text-color);
   box-shadow: 0 2px 8px 4px #cbcbcb;
   opacity: 1;
-}
+} */
 .sticker-btn {
   display: flex;
   align-items: center;
@@ -608,8 +612,11 @@ li {
   position: relative;
   box-sizing: border-box;
 }
-.sticker-btn:hover {
+.sticker-btn.active {
   text-shadow: 0 2px 8px #03c145;
+}
+.sticker-btn:hover {
+  text-shadow: 0 2px 8px #474747;
 }
 .sticker-btn::after {
   content: '';
@@ -662,7 +669,7 @@ li {
   width: 100%;
   height: 100%;
   grid-template-columns: 1.2fr repeat(2, 1fr) 1.2fr 1.2fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr 1.2fr;
   grid-template-areas: "sticker-box-1 sticker-box-2 sticker-box-2 sticker-box-4 sticker-box-6"
   "sticker-box-1 sticker-box-3 sticker-box-3 sticker-box-4 sticker-box-5";
   gap: 1rem;
@@ -680,7 +687,7 @@ li {
   /* align-items: center; */
   justify-content: center;
   background: #cbcbcb46;
-  /* background: var(--fun-color); */
+  background: #03c146c5;
   /* color: var(--); */
   box-sizing: border-box;
 
@@ -695,6 +702,11 @@ li {
 
   & h4 {
     margin-bottom: 0.5rem;
+    font-size: 30px;
+  }
+
+  & span {
+    font-weight: bold;
   }
 }
 .sticker-frame-box[style*="grid-area: sticker-box-2;"] > img {
@@ -719,12 +731,15 @@ li {
   align-items: center;
   justify-content: center;
   background: #cbcbcb46;
+  position: relative;
 }
 .sticker-frame-box[style*="grid-area: sticker-box-5;"] > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: contrast(80%);
+  position: absolute;
+  /* bottom: 5px; */
 }
 .sticker-frame-box[style*="grid-area: sticker-box-6;"] {
   display: flex;
@@ -737,8 +752,8 @@ li {
   aspect-ratio: 1 / 1;
   border-radius: 999px;
   border: 1px solid var(--text-color);
-  /* background: var(--fun2-color); */
-  background: #cbcbcb46;
+  background: var(--fun2-color);
+  /* background: #cbcbcb46; */
   transition: all .5s;
   cursor: pointer;
   position: relative;
@@ -766,7 +781,7 @@ li {
   transition: all .5s;
 }
 .sticker-frame-box[style*="grid-area: sticker-box-6;"] > a::after {
-  content: '前往 Google Drive';
+  content: '前往 Google Photos';
   position: absolute;
   left: 50%;
   top: -1rem;
@@ -775,6 +790,7 @@ li {
   color: var(--text-color);
   background: var(--fun-color);
   /* background: #cbcbcb46; */
+  background: #03c146c5;
   font-size: small;
   font-weight: bold;
   text-wrap: nowrap;
@@ -1293,6 +1309,9 @@ li.slide > span {
   }
   .video {
 
+  }
+  .video-selector {
+    gap: 0.5rem;
   }
   .video-container #stickerFrame {
     height: auto;

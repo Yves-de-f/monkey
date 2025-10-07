@@ -343,14 +343,20 @@ li {
     border: 1px solid var(--dark-bg);
   }
 }
-.hero-tag span:nth-child(-n+2) {
+.hero-tag span:nth-child(1) {
   border: 1px solid #000;
+  background: var(--fun-color);
+}
+.hero-tag span:nth-child(2),
+.hero-tag span:nth-child(3) {
+  /* border: 1px solid #000; */
 
   &:hover::after {
     width: 0;
   }
 }
-.hero-tag span:nth-child(-n+2)::after {
+.hero-tag span:nth-child(2)::after,
+.hero-tag span:nth-child(3)::after {
   content: '';
   background: #f349496b;
   width: 90%;
