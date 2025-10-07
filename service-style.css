@@ -720,9 +720,11 @@ li {
   justify-content: center;
   background: #cbcbcb46;
 }
-.sticker-frame-box[style*="grid-area: sticker-box-5;"] > span {
-  /* width: 100%;
-  height: 100%; */
+.sticker-frame-box[style*="grid-area: sticker-box-5;"] > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(80%);
 }
 .sticker-frame-box[style*="grid-area: sticker-box-6;"] {
   display: flex;

@@ -11,7 +11,7 @@ require 'lib/SMTP.php';
 
 
 // 指定你的收件信箱，將此替換為你實際的信箱
-$to_email = 'qa355139@gmail.com'; 
+$to_email = 'info@jhengfong-tw.com'; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // 獲取表單資料並進行安全過濾
@@ -31,16 +31,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // 設定 SMTP 伺服器
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';             // 你的 SMTP 伺服器 (例如: Gmail)
+        $mail->Host       = 'smtp.jhengfong-tw.com';             // 你的 SMTP 伺服器 (例如: Gmail) -> 'smtp.gmail.com'
         $mail->SMTPAuth   = true;                         // 啟用 SMTP 驗證
-        $mail->Username   = 'qa355139@gmail.com'; // 你的 SMTP 帳號
+        $mail->Username   = 'info@jhengfong-tw.com'; // 你的 SMTP 帳號
         $mail->Password   = 'your_smtp_app_password';       // 你的應用程式密碼
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;    // 使用 SSL/TLS 加密
         $mail->Port       = 465;                            // SSL 端口通常是 465
         $mail->CharSet    = 'UTF-8';                        // 確保中文字元正常顯示
 
         // 設定寄件人（你的郵箱，不是填寫人的）
-        $mail->setFrom('qa355139@gmail.com', '網站聯絡表單');
+        $mail->setFrom('info@jhengfong-tw.com', '網站聯絡表單');
         
         // 設定回覆地址為填寫人的郵箱給他
         $mail->addReplyTo($senderEmail, $senderName);
