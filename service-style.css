@@ -83,10 +83,10 @@ body {
 
   width: 98%;
   margin: auto;
-  user-select: none;
+  /* user-select: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  /* cursor: default; */
+  -moz-user-select: none; */
+  cursor: default;
   cursor: crosshair;
 }
 html {

@@ -79,11 +79,11 @@ body {
   font-family: "CustomFont",'Times New Roman', Times, serif ,system-ui, sans-serif;
   line-height: 1;
   margin: auto;
-  user-select: none;
+  /* user-select: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
+  -moz-user-select: none; */
   background: var(--bg-color);
-  /* cursor: default; */
+  cursor: default;
   /* cursor: crosshair; */
 }
 html {
