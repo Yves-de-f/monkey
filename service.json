@@ -208,7 +208,7 @@
     "subItems": [
       {
         "id": "cleanroom",
-        "name": "無塵室印刷/代工檢驗",
+        "name": "無塵室印刷 / 代工檢驗",
         "image": "images/P2/cleanroom.png",
         "images":["images/P2/cleanroom-small-0.png", "images/P2/cleanroom-small-1.png", "images/P2/cleanroom-small-2.png"],
         "description": ["正峰擁有 Class 100,000 等級無塵室，並通過 ISO 9001 品質管理認證，能提供專業的無塵室印刷/組裝與加工代工服務。",

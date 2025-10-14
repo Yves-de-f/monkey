@@ -700,16 +700,6 @@ li {
     object-fit: cover;
   }
 }
-.service-item6 {
-  
-  & .service-item-detail .service-item-detail-img img {
-    transform: scale(1.5) translateX(-4px);
-  }
-
-  &:hover .service-item-detail .service-item-detail-img img {
-    transform: scale(1.54) translateX(-4px);
-  }
-} 
 .service-item .service-item-detail {
   width: 100%;
   height: 100%;
@@ -736,7 +726,89 @@ li {
   border: .5px solid var(--border-color);
   opacity: .5;
 }
+.service-item9 {
+  grid-column: span 3;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 1px solid #1f293700;
+  background: #f0efef;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  /* background: #d3d3d357; */
+  transition: border .7s, background .7s;
 
+  &:hover {
+    background: #ffffff;
+    border: 1px solid #1f293740;
+  }
+
+  &:hover .service-item-detail-img > img {
+    transform: scale(1.05);
+  }
+
+  & .service-item-detail-text a {
+    display: block;
+    width: fit-content;
+    padding: 6px 12px;
+    font-size: 12px;
+    margin: 0rem;
+    /* text-decoration: underline; */
+    background: var(--text-color);
+    color: var(--dark-text);
+    /* position: absolute;
+    bottom: 0; */
+
+    &:hover {
+      /* text-decoration: none; */
+      opacity: .8;
+    }
+  }
+}
+.service-item9 .service-item-detail-img {
+  /* width: 100%; */
+  height: 450px;
+  aspect-ratio: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+.service-item9 .service-item-detail-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+  transition: transform 1s;
+}
+.service-item9 .service-item-detail {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+}
+.service-item9 .service-item-detail-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: end; */
+  justify-content: center;
+  margin-left: 2rem;
+  position: relative;
+}
+.service-item9 .service-item-detail h5 {
+  margin-bottom: 1rem;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.service-item9 .service-item-detail p {
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  letter-spacing: 1px;
+}
 
 
 
