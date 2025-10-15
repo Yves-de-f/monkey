@@ -156,13 +156,13 @@ li {
 }
 .navbar-text small {
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: calc((100% - 36px) / 2);
   color: var(--muted-text);
 }
 .navbar-text button {
   position: absolute;
-  right: 0;
+  left: 0;
   bottom: calc((100% - 36px) / 2);
   display: flex;
   align-items: center;
@@ -177,10 +177,11 @@ li {
   line-height: 1;
 }
 .navbar-text button::before {
-  content: "";
+  content: '';
   display: inline-block;
   height: 1px;
   width: 0;
+  margin-right: 3px;
   transition: all 1s;
 }
 .navbar-text button:hover::before {

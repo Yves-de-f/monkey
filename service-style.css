@@ -148,10 +148,11 @@ li {
   line-height: 1;
 }
 .navbar-text > a::before {
-  content: "";
+  content: '';
   display: inline-block;
   height: 1px;
   width: 0;
+  margin-right: 3px;
   transition: all 1s;
 }
 .navbar-text > a:hover::before {
