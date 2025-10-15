@@ -185,7 +185,6 @@ li {
 }
 .navbar-text button:hover::before {
   width: 3rem;
-  /* background-color: var(--fun-color); */
   background: var(--dark-bg);
 }
 .navbar-menu {
