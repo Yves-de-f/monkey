@@ -173,7 +173,7 @@ li {
 
   border-radius: 999px;
   border: 1px solid var(--border-color);
-  padding: .2rem .3rem;
+  padding: .2rem .5rem;
   line-height: 1;
 }
 .navbar-text button::before {
@@ -181,7 +181,6 @@ li {
   display: inline-block;
   height: 1px;
   width: 0;
-  margin-right: 10px;
   transition: all 1s;
 }
 .navbar-text button:hover::before {
