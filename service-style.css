@@ -1235,6 +1235,32 @@ li.slide > span {
   }
 }
 
+@media (max-width: 1300px) {
+  /* footer-content */
+  .footer-info-content {
+    padding: 1rem .8rem;
+  }
+  .foorter-block {
+    flex-direction: column;  
+    height: auto;
+    border-top: none;
+  }
+  .footer-info {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--dark-bg);
+    padding-left: 0;
+    padding-top: .5rem;
+  }
+  .information p:nth-child(2) {
+    text-align: end;
+    word-break: break-all;
+  }
+  .footer-info:nth-last-of-type(2) .information-r .information > a{
+    /* text-align: end; */
+  }
+}
+
 @media (max-width: 1200px) {
     /* 切換區 */
   .content-discription {
