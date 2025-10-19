@@ -144,20 +144,22 @@
     "subItems": [
       {
         "id": "sticker",
-        "name": "商用貼紙",
+        "name": "Commercial Labels",
         "image": "images/P2/sticker.png",
         "images": [],
         "description": ["With over 30 years of professional printing experience, Jhengfong provides high-quality commercial label printing services for a wide range of industries. We boast advanced printing equipment and a diverse selection of materials. Whether you're targeting food and beverage, healthcare, daily chemicals, or electronics, we can tailor labeling solutions to your product characteristics and usage environments.",
                         "",
-                        "We offer:",
-                        "- <span>A variety of materials: </span>Copperplate stickers, pearlescent synthetic stickers, transparent film nylon stickers, molded stickers, kraft stickers, Tetoron stickers, laser stickers, tamper-evident VOID stickers, tamper-evident fragile stickers, anti-static stickers, waterproof and scratch-resistant materials, and more.",
-                        "- <span>Professional Printing Technologies: </span>Color printing, digital printing, hot stamping with gold or silver, spot varnishing, anti-counterfeiting designs, variable serial number QR codes, self-adhesive stand-alone labels, embossing, and computer-perforated labels.",
-                        "- <span>High-purity manufacturing: </span>Production can be performed in a cleanroom environment, meeting the needs of high-end industries.​",
+                        "<span>We offer: </span>",
+                        "<span>- A variety of materials: </span>Copperplate stickers <span>|</span> pearlescent synthetic stickers <span>|</span> transparent film nylon stickers <span>|</span> molded stickers <span>|</span> kraft stickers <span>|</span> Tetoron stickers <span>|</span> laser stickers <span>|</span> tamper-evident VOID stickers <span>|</span> tamper-evident fragile stickers <span>|</span> anti-static stickers <span>|</span> waterproof and scratch-resistant materials and more..",
                         "",
-                        "<span>Customized sizes and roll packaging: </span>Suitable for automatic labeling, manual labeling, and special roll-to-roll labeling.​",
+                        "<span>- Professional Printing Technologies: </span>Color printing <span>|</span> digital printing <span>|</span> hot stamping with gold or silver <span>|</span> spot varnishing <span>|</span> anti-counterfeiting designs <span>|</span> variable serial number QR codes <span>|</span> self-adhesive stand-alone labels <span>|</span> embossing and computer-perforated labels.",
                         "",
-                        "Jhengfong not only provides label printing but also combines our automated labeling equipment with integration services to help businesses create complete, one-stop labeling solutions.​",
-                        "<span>!!!!!!下滑點擊google photo前往正峰貼紙展示區!!!!!!</span>"
+                        "<span>- High-purity manufacturing: </span>Production can be performed in a cleanroom environment, meeting the needs of high-end industries.",
+                        "",
+                        "<span>Customized sizes and roll packaging: </span>Suitable for automatic labeling, manual labeling, and special roll-to-roll labeling.",
+                        "",
+                        "Jhengfong not only provides label printing but also combines our automated labeling equipment with integration services to help businesses create complete, one-stop labeling solutions.",
+                        "<span>!!!!!!Scroll down and click on Google Photos to go to the Jhengfong sticker display area!!!!!!</span>"
                         ]
       },
       {
@@ -210,10 +212,10 @@
     "subItems": [
       {
         "id": "cleanroom",
-        "name": "Cleanroom Printing / OEM Inspection",
+        "name": "Cleanroom Printing & OEM Service",
         "image": "images/P2/cleanroom.png",
         "images":["images/P2/cleanroom-small-0.png", "images/P2/cleanroom-small-1.png", "images/P2/cleanroom-small-2.png"],
-        "description": ["Chengfong operates a Class 100,000 cleanroom and is ISO 9001 certified. We provide professional cleanroom printing, assembly, and OEM processing services.",
+        "description": ["Jhengfong operates a Class 100,000 cleanroom and is ISO 9001 certified. We provide professional cleanroom printing, inspection, assembly, and other OEM services.",
                         "We understand that many products have stringent cleanroom requirements during manufacturing or packaging, but not every company can afford to build its own cleanroom. Chengfong offers a one-stop OEM solution for high-purity printed stickers, produced by professionals in a cleanroom. Simply provide your components to us, and we'll assemble and inspect them in a cleanroom environment that meets international standards, ensuring consistent and reliable product quality.",
                         "",
                         "<span>Service Highlights:</span>",
