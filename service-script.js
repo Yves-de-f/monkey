@@ -213,8 +213,8 @@ function switchVideo(videoKey, btn) {
         video1: "gRAffEwoKfU?si=r4UGtLt2qh0TQsvW",
         video2: "xL2MU-OGyS0?si=_uKUrmGS0kq0c-nF",
         video3: "u9hr383x1hs?si=ijIVQKA2leZPjtF8",
-        video4: "YK1a8MZpZhQ?si=ryhvTyBhzWtuqk3F",
-        video5: "h9lRIaKDYsk?si=v7vGkTpQPdx41F8i"
+        video4: "mx1Ad_zskis?si=J4XQ1bG8Y4XUG-73",
+        video5: "E6ooFsoI7Ys?si=WMCfQcdFjT3SMXEr"
     };
 
     // 顯示影片區域，隱藏自訂內容

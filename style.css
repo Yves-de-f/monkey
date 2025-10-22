@@ -169,7 +169,7 @@ li {
   justify-content: center;
   background: var(--primary-color);
   font-family: inherit;
-  font-size: 14px;
+  /* font-size: 14px; */
 
   border-radius: 999px;
   border: 1px solid var(--border-color);
@@ -711,6 +711,7 @@ li {
   margin: 0 .7rem 1rem .7rem;
   font-size: 18px;
   line-height: 1.5;
+  font-weight: bold;
 }
 .service-item .service-item-detail p {
   line-height: 1.5;
@@ -762,6 +763,8 @@ li {
 }
 .service-item9 .service-item-detail-img {
   height: 450px;
+  /* width: 100%; */
+  /* aspect-ratio: 1 / 1; */
   box-sizing: border-box;
   overflow: hidden;
   padding: 0;
@@ -795,6 +798,7 @@ li {
   margin-bottom: 1rem;
   font-size: 18px;
   line-height: 1.5;
+  font-weight: bold;
 }
 .service-item9 .service-item-detail p {
   line-height: 1.5;
@@ -1382,6 +1386,7 @@ li {
     }
   }
   .service-item9 .service-item-detail-img {
+    height: auto;
     width: 100%;
     aspect-ratio: 1 / 1;
     margin-bottom: 1rem;
@@ -1432,7 +1437,8 @@ li {
     padding: 1rem .8rem;
   }
   .footer-LOGO {
-    font-size: 3.5rem;
+    font-size: 3.0rem;
+    margin-bottom: 0rem;
   }
   .foorter-block {
     flex-direction: column;
