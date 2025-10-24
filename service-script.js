@@ -5,8 +5,8 @@ function getQueryParam(param) {
 }
 
 const langFileMap = {
-    'en': 'service.json',
-    'zh-TW': 'service_zh.json' // 您也可以把 'zh-TW' 對應到同一個檔案
+    'en': 'service_en.json',
+    'zh-TW': 'service.json' // 您也可以把 'zh-TW' 對應到同一個檔案
     // 'ja': 'service_jp.json' // japanese or something else..
 };
 const defaultLang = 'en';

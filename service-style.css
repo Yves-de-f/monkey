@@ -129,26 +129,38 @@ li {
   transform: translate(-50%, -50%);
   font-weight: 400;
 }
-.navbar-text > small {
+.navbar-text .switch-lang {
   position: absolute;
   right: 0;
   bottom: calc((100% - 36px) / 2);
-  color: var(--muted-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: inherit;
+  border-radius: 999px;
+  border: 1px solid var(--dark-bg);
+  padding: .2rem .2rem .2rem .5rem;
+  line-height: 1;
+  margin-left: .5rem;
 }
-.navbar-text > a:not(header a) {
+.navbar-text .switch-lang img {
+  height: 16px;
+  aspect-ratio: 1 / 1;
+  margin-left: .5rem;
+}
+.navbar-text > .home-page {
   position: absolute;
   left: 0;
   bottom: calc((100% - 36px) / 2);
   display: flex;
   align-items: center;
   background: var(--fun2-color);
-  /* font-size: 14px; */
   border-radius: 999px;
   border: 1px solid var(--text-color);
   padding: .2rem .5rem;
   line-height: 1;
 }
-.navbar-text > a::before {
+.navbar-text > .home-page::before {
   content: '';
   display: inline-block;
   height: 1px;
@@ -156,7 +168,7 @@ li {
   margin-right: 3px;
   transition: all 1s;
 }
-.navbar-text > a:hover::before {
+.navbar-text > .home-page:hover::before {
   width: 3rem;
   background-color: var(--text-color);
 }
@@ -780,7 +792,7 @@ li {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: bold;
 
   &:hover {
@@ -790,6 +802,15 @@ li {
   &:active {
     opacity: .3;
   }
+
+  & img {
+    width: 32px;
+    height: 32px;
+    margin-left: .5rem;
+  }
+}
+:lang(en) .sticker-frame-box[style*="grid-area: sticker-box-6;"] > a {
+  font-size: 24px;
 }
 .sticker-frame-box[style*="grid-area: sticker-box-6;"] > a::after {
   content: 'Go To Google Photos';
@@ -808,9 +829,11 @@ li {
   border: 1.5px solid var(--text-color);
   width: fit-content;
   padding: 3px 6px;
-  opacity: 0;
   display: block;
   opacity: 1;
+}
+:lang(zh-TW) .sticker-frame-box[style*="grid-area: sticker-box-6;"] > a::after {
+  content: '前往 Google Photos';
 }
 .sticker-frame-box[style*="grid-area: sticker-box-6;"] > a:hover::after {
   display: block;
@@ -1069,6 +1092,8 @@ li.slide > span {
   margin-left: 1rem;
   background: var(--bg-color);
   border-radius: 50%;
+  height: 16px;
+  width: 16px;
   aspect-ratio: 1 / 1;
   border: 1.5px solid var(--border-color);
 }

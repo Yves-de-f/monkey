@@ -1,0 +1,237 @@
+[
+  {
+    "id": "auto-machine",
+    "name": "Automatic Labeling Machine",
+    "features": [
+      "為提升客戶包裝效率與標籤品質，協助企業從手動作業邁向自動化生產。無論您是食品、化妝品、清潔用品或工業材料業者，我們皆能依照瓶型、材質、標籤尺寸與產線需求，量身打造最合適的貼標解決方案。"
+    ],
+    "subItems": [
+      {
+        "id": "LD3000",
+        "name": "Automatic Double-Sided Labeling Machine",
+        "image": "images/items/LD3000.png",
+        "images": ["images/items/LD3000-small-0.jpg", "images/items/LD3000-small-1.jpg", "images/items/LD3000-small-2.jpg"],
+        "description": ["The LD3000 automatic double-sided labeling machine is a dual-purpose machine that simultaneously applies labels to both sides of a product or container. It can apply 1,800 to 6,000 labels per hour, labeling both the front and back. This significantly reduces the repeated loading and downtime typically required by single-sided labeling machines, making it easy to apply both single and double labels, thereby reducing labeling time.",
+                        "",
+                        "Each labeling head can operate independently or simultaneously, depending on the product's characteristics, allowing for labeling on the front, back, or sides.",
+                        "・If you only need to apply a single label to one side of a product, such as the front or back, you can select single-head labeling mode, which uses only one labeling head.",
+                        "・If you need to apply two labels of the same size to both sides of a product or container, such as the front and back, you can select dual-head labeling mode, which allows you to use both labels simultaneously.",
+                        "",
+                        "<span>Applicable Products:</span>",
+                        "The LD3000 is suitable for round and flat bottles of various sizes and materials, including plastic, glass, PET, and metal bottles, as well as large and small round bottles and jars (including oval and angled bottles). It can also be used on flat containers such as square bottles and cartons, covering a wide range of product types. Equipped with two high-performance labeling heads, it ensures high productivity even during continuous production.",
+                        "The labeling machine can be designed with a retaining bracket and hole position as required. You can integrate other machines, such as packaging machines, hot stamping machines, stackers, liquid fillers, and capping machines, to create an automated packaging production line based on future production needs.",
+                        "",
+                        "<span>Specifications:</span>",
+                        "- Labeling Speed: 20-40 pcs/minute (depending on label and product size)",
+                        "- Bottle and Can Size: Diameter 20mm-125mm, Height 30-160mm",
+                        "- Label Dimensions: (Length) 20-300mm, (Width) 10-100mm",
+                        "- Label Roll: Inner Diameter 75mm, Outer Diameter 300mm",
+                        "- Accuracy: ± 1mm",
+                        "- Power Requirements: 110 or 220 VAC, 50/60 Hz",
+                        "<span>*Dimensions may vary depending on configuration; detailed specifications are subject to actual shipment.</span>"
+                        ]
+      },
+      {
+        "id": "LR4000",
+        "name": "Automatic Round Bottle Labeling Machine",
+        "image": "images/items/LR4000.png",
+        "images": ["images/items/LR4000-small-0.jpg", "images/items/LR4000-small-1.jpg","images/items/LR4000-small-2.jpg"], 
+        "description": ["Powered by a stepper motor and equipped with a microcomputer-controlled system, this automatic round bottle labeling machine can quickly label a variety of round bottles and cans. Labeling is not restricted by material type and can be applied to full or half-circle labels on metal, plastic, and glass bottles and containers. It is suitable for applying various self-adhesive labels, anti-counterfeiting labels, and laser labels quickly and with minimal error.",
+                        "",
+                        "This high-speed automatic round bottle labeling machine features a PLC control system and a color human-machine interface, enabling easy parameter setting. A separate wheel module for feeding bottles and cans allows for flexible labeling of a wide range of product sizes. Precision detection sensors ensure stable and continuous detection of the objects being labeled. The round bottle labeling machine can operate independently or be connected to a date stamping machine or high-speed packaging machine to accelerate production efficiency.",
+                        "",
+                        "Suitable for labeling a variety of beverage bottles and cylindrical items, such as juice, soft drinks, soy milk, mineral water, milk, yogurt, seasonings, detergents, health foods, pharmaceuticals, beauty products, and daily necessities, this round bottle labeling machine is versatile and suitable for various industries. Optional automatic bottle feeders and receivers, as well as customized labeling mechanisms for specific areas, enhance the machine's versatility.",
+                        "",
+                        "<span>Specifications:</span>",
+                        "- Motor: Stepper motor drive",
+                        "- Labeling speed: 40-120 pcs/min (depending on product and label size)",
+                        "- Bottle size: Diameter 16mm-90mm, Height 30-160mm",
+                        "- Label width: 10-100mm, Label length: 20-300mm",
+                        "- Label roll: Inner diameter 75mm, Outer diameter 300mm",
+                        "- Power supply requirements: 110V or 220VAC, 50/60Hz",
+                        "- Product dimensions: (L) 1780mm, (W) 930mm, (H) 1200mm",
+                        "<span>*Dimensions may vary depending on configuration; detailed specifications are subject to actual shipment.</span>"
+                        ]
+      },
+      {
+        "id": "LT3000",
+        "name": "Automatic Flat-type Labeling Machine",
+        "image": "images/items/LT3000.png",
+        "images": ["images/items/LT3000-small-0.jpg", "images/items/LT3000-small-1.jpg","images/items/LT3000-small-2.jpg"], 
+        "description": ["The LT3000 automatic labeler can be utilized in various industries for labeling bags, boxes, bottles, cans, and containers. It applies sticker labels to flat surfaces, tops, or lids of bottles and cans. This device automates the labeling process, improving packaging efficiency and accuracy. It is ideally suited for a wide range of fast-moving consumer products, including memory cards, RFID tags, paper boxes, plastic boxes, aluminum foil bags, ziplock bags, plastic bags, cosmetics, personal care products, and household items.",
+                        "",
+                        "<span>Applicable Product Shapes:</span>",
+                        "Primarily applied to the flat surfaces of products, bottle containers can be labeled with non-wraparound labels, typically on the front, back, or top of the can. Tubular single-sided labels, flat bags, and boxes are also suitable.",
+                        "",
+                        "The labeling machine can be designed with a retaining bracket and hole positions as needed. You can integrate this machine with other machines, such as packaging machines, hot stamping machines, stackers, liquid fillers, and capping machines, to create an automated packaging production line based on future production needs.",
+                        "",
+                        "<span>Specifications:</span>",
+                        "- Motor: Stepper motor drive",
+                        "- Labeling speed: 30-60 pcs/min (depending on product and label size)",
+                        "- Label size: (Length) 10-250 mm, (Width) 10-100 mm",
+                        "- Label roll: Inner diameter 75 mm, Outer diameter 300 mm",
+                        "- Product dimensions: (L) 1400 mm, (W) 750 mm, (H) 1459 mm",
+                        "- Accuracy: ± 1 mm",
+                        "- Power supply requirements: Single-phase 110V or 220VAC, 50/60Hz, single phase",
+                        "<span>*Dimensions may vary depending on configuration. Detailed specifications are subject to actual shipment.</span>"
+                        ]
+      },
+      {
+        "id": "LR1100",
+        "name": "Tabletop Round Bottle Labeling Machine",
+        "image": "images/items/LR1100.png",
+        "images": ["images/items/LR4000-small-0.jpg", "images/items/LR4000-small-1.jpg","images/items/LR4000-small-2.jpg"], 
+        "description": ["This tabletop round bottle labeling machine is a flexible and versatile machine suitable for a variety of upright round bottles, cans, and cylindrical products. It offers a wide range of labeling options, including full 360°, 2/3, and half-circle coverage, and can even apply labels to both sides of the bottle, ensuring a seamless fit and perfectly showcasing the product's quality. The intuitive user interface and knob-operated microcomputer control system make it easy for production personnel to learn, set up, and start using the machine quickly.",
+                        "",
+                        "<span>Highly Efficient, Versatile Tabletop Labeling Machine</span>",
+                        "Equipped with the dedicated LR1100 roll-to-roll lift module, it enables flexible bottle height adjustment to meet the high-position labeling needs. The sleek design features a striking red label tray, ensuring clear label inventory and quick and easy roll changes. Automatic label sensing and label-feeding mechanisms ensure precise labeling and superior quality. This single machine can handle a variety of round bottles, can, and oval bottles, and can adjust the height and angle as needed to accommodate different product labeling methods. Its versatile application capabilities make this tabletop labeler an ideal solution for small to medium-sized production operations seeking high-quality labeling.",
+                        "This single machine can handle a variety of round bottles, can, and oval bottles, and can adjust the height and angle as needed to accommodate different product labeling methods. Its versatile application capabilities make this tabletop labeler an ideal solution for small to medium-sized production operations seeking high-quality labeling.",
+                        "",
+                        "<span>Applicable Materials and Products:</span>",
+                        "It can handle various plastic, glass, and metal bottles of different materials, including those used for food and beverages, cosmetics, health supplements, pharmaceuticals, cleaning supplies, and chemical products.",
+                        "",
+                        "<span>Specifications:</span>",
+                        "Labeling Head Drive Mode: Stepper Motor",
+                        "- Labeling Speed: 10 m/min",
+                        "- Productivity: 20-40 pcs/min (depending on label length and product)",
+                        "- Labeling Accuracy: ± 1mm",
+                        "- Bottle and Can Size: Diameter 16mm-100mm, Height 30-160mm",
+                        "- Label Size: 10-100mm, Label Length: 10-300mm",
+                        "- Label Roll: Inner Diameter 75mm, Outer Diameter 300mm",
+                        "- Power Supply Requirements: 110 / 220VAC, 50/60Hz",
+                        "- Product Dimensions: (L) 1010mm, (W) 845mm, (H) 445mm",
+                        "<span>*Dimensions may vary depending on configuration; detailed specifications are subject to actual shipment.</span>"
+                        ]
+      },
+      {
+        "id": "FC1050",
+        "name": "Tabletop Fully Automatic Filling, Capping, and Labeling Production Line",
+        "image": "images/items/FC1050.png",
+        "images": ["images/items/FC1050-small-0.jpg", "images/items/FC1050-small-1.jpg", "images/items/FC1050-small-2.jpg"], 
+        "description": ["<span>Highly Efficient, Versatile Tabletop Labeler</span>",
+                        "This machine boasts a compact tabletop design that occupies minimal space, yet offers the efficiency and precision of an automated vertical round bottle labeler, making it an economical and practical choice for small-volume to medium-volume businesses.",
+                        "Equipped with a dedicated roll-to-roll lift module, it enables flexible bottle height adjustment to meet the high-position labeling needs. Automatic sensor sensors and label-touching devices ensure a secure label application, enhancing the quality and aesthetics of finished products.",
+                        "",
+                        "Furthermore, a single machine can handle a variety of round bottles, cans, and oval bottles in various sizes, and its height and angle can be adjusted as needed to accommodate different product labeling methods.",
+                        "",
+                        "<span>Solving the Pain Points of Filling Viscous Liquids</span>",
+                        "Traditional filling processes often lead to contamination or volume errors due to the properties of the liquid. This equipment effectively improves the cleanliness and accuracy of the filling process. Compared to semi-automatic tabletop filling machines, the most significant feature of this fully automatic production line is its built-in automatic cap placement mechanism, which actively detects and places caps, eliminating the need for manual operation and significantly reducing manpower requirements.",
+                        "",
+                        "<span>Efficient Finishing, Complete Production Line</span>",
+                        "The labeler at the end of the production line ensures precise labeling and minimizes air bubbles. Combined with a printer, it can directly print the manufacturing date, serial number, and expiration date on the label, creating a fully automated process from filling, capping, to labeling.",
+                        "",
+                        "<span>Specifications:</span>",
+                        "- Filling Range: 10-200ml",
+                        "- Filling Speed: 30-150ml/s (Production speed may vary slightly depending on liquid",
+                        "- Air Pressure Requirement: 90PSI/3CFM",
+                        "- Cap Diameter: Maximum 30mm (Capping speed may vary depending on cap size, shape, and material).",
+                        "- Label Size: (W) 10-100mm / (L) 10-250mm",
+                        "- Label Inner Diameter Limit: 75mm inner diameter, outer diameter less than 300mm",
+                        "- Voltage Requirement: 110/220VAC Single-phase",
+                        "- Printing Speed: 100-120/min (depending on the settings of the front-end equipment on the production line)",
+                        "- Print Width: 1-3 lines, 1-14 characters per line",
+                        "<span>*Dimensions may vary depending on configuration; detailed specifications are subject to actual shipment.</span>"
+                        ]
+      }
+    ]
+  },
+  {
+    "id": "sticker-printing",
+    "name": "Commercial Stickers",
+    "features": [
+      "若您的產品數量不大、形狀特殊、或貼標需求多樣化，我們也提供貼紙代貼（手工貼標）服務，由專業人員協助完成貼標作業，讓您節省人力與時間，專注在產品開發與銷售。"
+    ],
+    "subItems": [
+      {
+        "id": "sticker",
+        "name": "Commercial Labels",
+        "image": "images/P2/sticker.png",
+        "images": [],
+        "description": ["With over 30 years of professional printing experience, Jhengfong provides high-quality commercial label printing services for a wide range of industries. We boast advanced printing equipment and a diverse selection of materials.Whether you are in the food and beverage, pharmaceutical and healthcare, daily chemical products, or electronics industries, we can tailor the most suitable labeling solution based on your product characteristics and usage environment.",
+                        "",
+                        "<span>We offer: </span>",
+                        "<span>- A variety of materials: </span>Copperplate Stickers <span>|</span> Pearlescent Synthetic Stickers <span>|</span> Transparent Film Nylon Stickers <span>|</span> Woodfree Paper Stickers <span>|</span> Kraft Stickers <span>|</span> Tetoron Stickers <span>|</span> Laser Stickers <span>|</span> Tamper-Evident VOID Stickers <span>|</span> Tamper-Vident Fragile Stickers <span>|</span> Anti-Static Stickers <span>|</span> Shelf-Adhesive Pop-Up Label <span>|</span> Dot Matrix Pin-Fed Paper Label <span>|</span> Waterproof and Scratch-Resistant Materials <span>|</span> and more..",
+                        "",
+                        "<span>- Professional Printing Technologies: </span>Color Printing <span>|</span> Digital Printing <span>|</span> Hot Stamping with Gold or Silver <span>|</span> Spot Varnishing <span>|</span> Anti-Counterfeiting Designs <span>|</span> Variable Serial Number QR Codes <span>|</span> Embossing <span>|</span> and more..",
+                        "",
+                        "<span>- High-purity manufacturing: </span>Production can be performed in a cleanroom environment, meeting the needs of high-end industries.",
+                        "",
+                        "<span>Customized sizes and roll packaging: </span>Suitable for automatic labeling, manual labeling, and special roll-to-roll labeling.",
+                        "",
+                        "Jhengfong not only provides label printing but also combines our automated labeling equipment with integration services to help businesses create complete, one-stop labeling solutions.",
+                        "<span>!!!!!!Scroll down and click on Google Photos to go to the Jhengfong sticker display area!!!!!!</span>"
+                        ]
+      },
+      {
+        "id": "handmade",
+        "name": "Hand-Labeling Service",
+        "image": "images/P2/handmade.png",
+        "images": ["images/P2/handmade-small-0.png", "images/P2/handmade-small-1.png"],
+        "description": ["In some cases, when the product quantity is fixed but the scale isn't large enough to require a labeling machine, hand-labeling is the most suitable option. Our experienced team of professional hand-labeling specialists, skilled in a variety of materials and application techniques, can meticulously handle labeling of bottles, cans, boxes, and even irregularly shaped products, ensuring each label is perfectly adhered, neatly applied, and aesthetically pleasing.",
+                        "",
+                        "Whether you're running a small trial run for a new product, creating limited-edition items for promotional events, or requiring exceptionally meticulous labeling, we can provide you with stable and reliable assistance. With our hand-labeling service, you don't have to worry about uneven labeling or wasted labor. We'll meticulously take care of every detail, ensuring your products are presented to customers in perfect condition. Welcome to contact us with samples!",
+                        "",
+                        "<span>Suitable Needs</span>",
+                        "- Fixed-quantity products that don't meet the requirements of mechanized production",
+                        "- Irregular bottles (such as special-shaped PET bottles, glass bottles, and cosmetic bottles)",
+                        "- Containers with uneven or convex surfaces",
+                        "- Labels requiring specific positioning (e.g., alignment with bottle patterns)",
+                        "- Small-volume, diversified products"
+                        ]
+      }
+    ]
+  },
+  {
+    "id": "barcode-machine",
+    "name": "Barcode Printers",
+    "features": [
+      "租賃彈性，可短期或長期合作",
+      "現場安裝與操作教學",
+      "提供貼標樣品測試與方案建議"
+    ],
+    "subItems": [
+    {   
+        "id": "label-barcode",
+        "name": "Barcode Printers",
+        "image": "images/P2/label-barcode.png",
+        "images": [],
+        "description": ["We offer high-performance barcode printer solutions for product labeling, warehousing and logistics, retail, and shipping management. Our diverse models, high-quality printing, and intuitive operation significantly enhance your production and management efficiency.",
+                        "<span>*Website under construction. Please contact us directly!</span>"
+                        ]
+        }
+    ]
+  },
+    {
+    "id": "cleanroom",
+    "name": "Clean Room",
+    "features": [
+      "租賃彈性，可短期或長期合作",
+      "現場安裝與操作教學",
+      "提供貼標樣品測試與方案建議"
+    ],
+    "subItems": [
+      {
+        "id": "cleanroom",
+        "name": "Cleanroom Printing & OEM Service",
+        "image": "images/P2/cleanroom.png",
+        "images":["images/P2/cleanroom-small-0.png", "images/P2/cleanroom-small-1.png", "images/P2/cleanroom-small-2.png"],
+        "description": ["Jhengfong operates a Class 100,000 cleanroom and is ISO 9001 certified. We provide professional cleanroom printing, inspection, assembly, and other OEM services.",
+                        "We understand that many products have stringent cleanroom requirements during manufacturing or packaging, but not every company can afford to build its own cleanroom. Chengfong offers a one-stop OEM solution for high-purity printed stickers, produced by professionals in a cleanroom. Simply provide your components to us, and we'll assemble and inspect them in a cleanroom environment that meets international standards, ensuring consistent and reliable product quality.",
+                        "",
+                        "<span>Service Highlights:</span>",
+                        "- High-purity, zero-contamination printed stickers",
+                        "- Class 100,000 cleanroom environment: Effectively controls dust, static electricity, and contamination risks",
+                        "- ISO 9001 certified: Rigorous quality control in compliance with international standards",
+                        "- Flexible OEM model: Assembly, packaging, and testing services can be provided based on customer needs",
+                        "- Reduced installation costs: Enjoy a professional manufacturing environment without investing in expensive cleanrooms",
+                        "",
+                        "<span>Applicable Industries: </span>",
+                        "- Electronic components / Optoelectronic modules",
+                        "- Medical devices / Biotech consumables",
+                        "- Precision machine components / Industrial components",
+                        "Chengfong is committed to providing high-purity, high-quality, zero-contamination cleanroom OEM services, allowing customers to focus on core R&D and market expansion, leaving the complex manufacturing process to us."
+                        ]
+      }
+    ]
+  }
+]
