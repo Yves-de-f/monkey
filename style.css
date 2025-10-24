@@ -95,6 +95,22 @@ li {
 
 
 /* navbar */
+.navbar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 998;
+  background: #e9e9e9d2;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity 1s;
+}
+.navbar-overlay.active {
+  display: block;
+  opacity: 1;
+}
 .navbar {
   background: var(--bg-color);
   position: sticky;
@@ -107,6 +123,9 @@ li {
 .navbar.transparent {
   /* background: transparent; */
   transform: translateY(-41px);
+}
+.navbar.transparent.active {
+  transform: translateY(0%);
 }
 .navbar-container {
   display: flex;
@@ -154,11 +173,38 @@ li {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.navbar-text small {
+.navbar-text .switch-lang {
   position: absolute;
   right: 0;
   bottom: calc((100% - 36px) / 2);
-  color: var(--muted-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background: var(--primary-color); */
+  font-family: inherit;
+  /* font-size: 14px; */
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  /* padding: .2rem .2rem .2rem .5rem; */
+  line-height: 1;
+
+  &:lang(en) img {
+    margin-left: .5rem;
+  }
+
+  &:lang(zh-TW) img {
+    margin-right: .5rem;
+  }
+}
+:lang(en) .switch-lang {
+    padding: .2rem .2rem .2rem .5rem;
+}
+:lang(zh-TW) .switch-lang {
+    padding: .2rem .5rem .2rem .2rem;
+}
+.navbar-text .switch-lang img {
+  height: 16px;
+  aspect-ratio: 1 / 1;
 }
 .navbar-text button {
   position: absolute;
@@ -254,11 +300,6 @@ li {
 .navbar-menu ul li:hover>span {
   border: 1px solid var(--dark-text-fun);
 }
-.navbar.transparent.active-on-click {
-  transform: translateY(0%);
-}
-
-
 
 .Marquee-container {
   border-top: 2px solid var(--text-color);
@@ -410,6 +451,15 @@ li {
   align-items: center;
   /* border-radius: 4px; */
   font-weight: 600;
+
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+:lang(en) .hero-btn {
+  width: 200px;
 }
 .hero-btn:nth-child(1) {
 
@@ -1347,6 +1397,10 @@ li {
   }
   .hero-btn {
     flex: 1;
+
+    & a {
+      font-size: 14px;
+    }
   }
   .hero-btn:nth-child(2) {
     color: var(--text-color);

@@ -4,18 +4,37 @@ function getQueryParam(param) {
     return urlParams.get(param);
 }
 
+const langFileMap = {
+    'en': 'service.json',
+    'zh-TW': 'service_zh.json' // 您也可以把 'zh-TW' 對應到同一個檔案
+    // 'ja': 'service_jp.json' // japanese or something else..
+};
+const defaultLang = 'en';
+
 document.addEventListener('DOMContentLoaded', () => {
     const serviceTabsContainer = document.querySelector('.service-tabs');
 
+    /** 
+    * 根據傳入的語言代碼載入對應的 JSON 檔案並更新頁面
+    * @param {string} lang
+    */
+    function loadLanguage(lang) {
+
+        const filename = langFileMap[lang] || langFileMap[defaultLang];
+        const effectiveLang = langFileMap[lang] ? lang : defaultLang;
+
     // Fetch JSON data
-    fetch('service.json')
+    fetch(filename)
         .then(response => {
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error(`Network response was not ok for ${filename}`);
             }
             return response.json();
         })
         .then(data => {
+            // 更新 <html> 標籤的 lang 屬性，我用靜態宣告，可不用再動態宣告
+            // document.documentElement.lang = effectiveLang;
+
             // 生成服務和子服務
             data.forEach((service, index) => {
                 const isActive = index === 0 ? 'active' : ''; // 第一項預設 active
@@ -97,7 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => {
             console.error('There has been a problem with your fetch operation:', error);
         });
-
+    }
+    
     // ✅ 點擊服務時，顯示對應的子服務列表 & 預設選第一個子項
     function handleServiceClick(serviceId, data) {
         const serviceTabs = document.querySelectorAll('.service-tabs .service-group');
@@ -180,8 +200,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // 顯示內容區塊
         document.querySelector('.content-panel').classList.add('visible');
     }
-});
+    
+    const currentLang = document.documentElement.lang;
 
+    // 2. 根據讀取到的語言，呼叫 loadLanguage 函數
+    loadLanguage(currentLang);
+});
 
 // gobacktotop
 // 1. 取得按鈕元素

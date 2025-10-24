@@ -1,24 +1,25 @@
-
 // 選單開關
 document.addEventListener('DOMContentLoaded', () => {
   const toggleSwitches = document.querySelectorAll('.menu-toggle');
   const navMenu = document.getElementById('navbar-menu');
   const navbar = document.querySelector('.navbar.transparent');
-
+  const navbarOverlay = document.querySelector('.navbar-overlay');
+  // console.log({ navMenu, navbar, navbarOverlay });
   toggleSwitches.forEach(switchBtn => {
     switchBtn.addEventListener('click', () => {
 
       navMenu.classList.toggle('on');
 
       if (navMenu.classList.contains('on')) {
-        navbar.classList.add('active-on-click');
+        navbar.classList.add('active');
+        navbarOverlay.classList.add('active');
       } else {
-        navbar.classList.remove('active-on-click');
+        navbar.classList.remove('active');
+        navbarOverlay.classList.remove('active');
       }
     });
   });
 });
-
 
 // 手動開關按鈕（頁尾）
 const footerblock = document.getElementById('footer-info-content');
