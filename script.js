@@ -1,24 +1,56 @@
 // 選單開關
 document.addEventListener('DOMContentLoaded', () => {
+
+  // --- 1. 宣告 DOM 元素 (已移除 bodyEl 和滾動條計算) ---
   const toggleSwitches = document.querySelectorAll('.menu-toggle');
   const navMenu = document.getElementById('navbar-menu');
-  const navbar = document.querySelector('.navbar.transparent');
-  const navbarOverlay = document.querySelector('.navbar-overlay');
-  // console.log({ navMenu, navbar, navbarOverlay });
-  toggleSwitches.forEach(switchBtn => {
-    switchBtn.addEventListener('click', () => {
+  const navbar = document.getElementById('navbar');
 
-      navMenu.classList.toggle('on');
+  // --- 2. 選單開關邏輯 (移除 no-scroll 相關程式) ---
+  if (toggleSwitches.length > 0 && navMenu && navbar) {
+    toggleSwitches.forEach(switchBtn => {
+      switchBtn.addEventListener('click', () => {
+        
+        // 切換選單的 'on' 狀態
+        navMenu.classList.toggle('on');
 
-      if (navMenu.classList.contains('on')) {
-        navbar.classList.add('active');
-        navbarOverlay.classList.add('active');
-      } else {
-        navbar.classList.remove('active');
-        navbarOverlay.classList.remove('active');
-      }
+        // 根據選單狀態，切換 navbar 的 'active'
+        // (這通常用於選單展開時，讓 navbar 保持可見，例如在透明狀態下)
+        if (navMenu.classList.contains('on')) {
+          navbar.classList.add('active');
+        } else {
+          navbar.classList.remove('active');
+        }
+      });
     });
-  });
+  }
+
+  // --- 3. 頁面捲動邏輯 (保留) ---
+  let lastScrollTop = 0;
+  if (navbar) {
+    window.addEventListener("scroll", () => {
+      const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScrollTop > lastScrollTop && currentScrollTop > 0) {
+        // 向下滾動
+        navbar.classList.add("transparent");
+      } else {
+        // 向上滾動
+        navbar.classList.remove("transparent");
+      }
+      lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+    });
+  }
+
+});
+
+// image offset
+window.addEventListener('scroll', function() {
+  const scrolled = window.scrollY;
+  const image = document.querySelector('.hero-img img');
+  
+  const moveRate = 0.1;
+  image.style.transform = `translateY(-${scrolled * moveRate}px)`;
 });
 
 // 手動開關按鈕（頁尾）
@@ -66,39 +98,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-
-let lastScrollTop = 0;
-const navbar = document.getElementById("navbar");
-
-window.addEventListener("scroll", () => {
-  const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-  if (currentScrollTop > lastScrollTop) {
-    // 向下滾動
-    navbar.classList.add("transparent");
-  } else {
-    // 向上滾動
-    navbar.classList.remove("transparent");
-  }
-
-  lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
-});
-
-
-window.addEventListener('scroll', function() {
-  const scrolled = window.scrollY;
-  const image = document.querySelector('.hero-img img');
-  
-  const moveRate = 0.1;
-  image.style.transform = `translateY(-${scrolled * moveRate}px)`;
-});
-
-
-
-
-
-
-
+// mailer
 document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault();
         const form = event.target;

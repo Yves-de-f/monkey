@@ -272,6 +272,25 @@ if (stickerBtn) {
     switchToSticker(stickerBtn);
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const videoParam = urlParams.get("video"); // 例如 ?video=video1 或 ?video=sticker
+
+    if (videoParam) {
+        if (videoParam === "sticker") {
+            const stickerBtn = document.getElementById("section3-sticker");
+            if (stickerBtn) switchToSticker(stickerBtn);
+        } else {
+            const targetBtn = document.querySelector(`[onclick*="${videoParam}"]`);
+            if (targetBtn) switchVideo(videoParam, targetBtn);
+        }
+    } else {
+        // 預設載入 Sticker
+        const stickerBtn = document.getElementById("section3-sticker");
+        if (stickerBtn) switchToSticker(stickerBtn);
+    }
+});
+
 
 
 // faq
