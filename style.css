@@ -690,9 +690,9 @@ li {
     padding: 6px 12px;
     font-size: 12px;
     margin: auto .7rem 0 .7rem;
-    /* text-decoration: underline; */
     background: var(--text-color);
     color: var(--dark-text);
+    align-self: flex-end;
 
     &:hover {
       /* text-decoration: none; */
@@ -787,6 +787,7 @@ li {
     margin: 0rem;
     background: var(--text-color);
     color: var(--dark-text);
+    align-self: flex-end;
 
     &:hover {
       opacity: .8;
@@ -1213,7 +1214,6 @@ li {
   flex: 1;
   gap: .5rem;
 }
-
 
 /* footer-buttom */
 .footer {

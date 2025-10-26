@@ -176,9 +176,6 @@ li {
 .page{
   max-width: 1300px;
   margin: 3rem auto;
-  /* border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,.04); */
   background: var(--bg-color);
 }
 .container {      
@@ -249,6 +246,7 @@ li {
 ul.slides {
   display: flex;
   width: 100%;
+  height: auto;
   gap: 2rem;
   list-style: none;
   margin-bottom: 4rem;
@@ -272,7 +270,7 @@ li.slide > img {
   object-fit: contain;
 }
 li.slide > span {
-
+  text-wrap: nowrap;
 }
 /* .slide:nth-of-type(1) {
   background-color: #F2E205;
@@ -312,7 +310,22 @@ li.slide > span {
 
 
 @media (max-width: 1200px) {
+  /* Hero 區 */
+  .hero h3 {  
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 
+  /* 為什麼選擇我們 */
+  .why-inner {
+    flex-direction: column;
+  }
+  .why h3 {
+    margin-bottom: 2rem;
+  }
+  .why p {
+    line-height: 2.0;
+  }
 }
 
 @media (max-width: 780px) {
@@ -325,7 +338,7 @@ li.slide > span {
     padding: 1rem;
   }
 
-  /* Hero 區 */
+  /* Hero */
   .hero h3 {  
     font-size: 30px;
     width: 100%;
@@ -335,6 +348,18 @@ li.slide > span {
   .hero p {
     width: 100%;
     text-align: center;
+  }
+
+  /* FAQ */
+  ul.slides {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 2rem;
+    list-style: none;
+    margin-bottom: 4rem;
+    box-sizing: border-box;
   }
 
   /* 為什麼選擇我們 */
@@ -347,6 +372,6 @@ li.slide > span {
   }
   .why p {
     line-height: 2.0;
-    text-align: center;
+    /* text-align: center; */
   }
 }
