@@ -1361,6 +1361,13 @@ li.slide > span {
   .sticker-frame-box[style*="grid-area: sticker-box-6;"] > a {
     width: auto;
     height: 100%;
+    
+    & img {
+      
+    }
+  }
+  :lang(en) .sticker-frame-box[style*="grid-area: sticker-box-6;"] > a {
+    font-size: 18px;
   }
   .sticker-frame-box[style*="grid-area: sticker-box-6;"] > a::after {
     left: -1rem;
