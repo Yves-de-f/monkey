@@ -143,10 +143,14 @@ li {
   line-height: 1;
   margin-left: .5rem;
 }
-.navbar-text .switch-lang img {
-  height: 16px;
-  aspect-ratio: 1 / 1;
+.navbar-text .switch-lang svg {
   margin-left: .5rem;
+  fill: var(--dark-text-primary);
+  
+  & path {
+    stroke: var(--dark-text-primary);
+    stroke-width: .1;
+  }
 }
 .navbar-text > .home-page {
   position: absolute;
@@ -1373,6 +1377,14 @@ li.slide > span {
     left: -1rem;
     top: 50%;
     transform: translate(-100%, -50%);
+  }
+
+  /* FAQ */
+  .faq-video-container {
+    width: 100%;
+  }
+  .faq-video-container img {
+    width: 100%;
   }
 }
 
