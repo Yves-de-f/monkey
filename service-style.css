@@ -1172,6 +1172,9 @@ li.slide > span {
   width: 100%;
   box-sizing: border-box;
 }
+:lang(en) .information {
+  letter-spacing: 0;
+}
 .information a {
   width: 100%;
   font-size: 18px;
