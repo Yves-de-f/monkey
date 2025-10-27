@@ -1,4 +1,3 @@
- /*  全站 Reset + 變數設定 */
 :root {
   --primary-color: #899599;
   --secondary-color: #00202c;
@@ -19,7 +18,7 @@
     --text-color: var(--dark-text);
   }
 } */
-/* 預設字體大小：PC/Desktop */
+/* PC/Desktop */
 h1 { font-size: 48px; }
 h2 { font-size: 36px; }
 h3 { font-size: 28px; }
@@ -27,7 +26,7 @@ h4 { font-size: 24px; }
 h5 { font-size: 20px; }
 h6 { font-size: 16px; }
 p { font-size: 20px; }
-/* 平板字體大小調整 */
+/* 平板 */
 @media (max-width: 1200px) {
   h1 { font-size: 40px; }
   h2 { font-size: 32px; }
@@ -36,7 +35,7 @@ p { font-size: 20px; }
   h5 { font-size: 18px; }
   h6 { font-size: 16px; }
 }
-/* 手機字體大小調整 */
+/* 手機 */
 @media (max-width: 768px) {
   h1 { font-size: 32px; }
   h2 { font-size: 28px; }
@@ -67,12 +66,8 @@ input, textarea, select, button,
 label, summary {
   margin: 0;
   padding: 0;
-  /* font: inherit; */
-  /* vertical-align: baseline; */
   color: inherit;
   text-decoration: none;
-  /* line-height: inherit; */
-  /* background: transparent; */
   border: 0;
   box-sizing: border-box;
 }
@@ -87,7 +82,6 @@ body {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  /* cursor: default; */
   cursor: crosshair;
 }
 html {
@@ -148,7 +142,7 @@ li {
   line-height: 1;
 }
 .navbar-text > a::before {
-  content: "";
+  content: '';
   display: inline-block;
   height: 1px;
   width: 0;
@@ -162,15 +156,9 @@ li {
 
 /* header */
 .header-area {
-  /* height: 6rem; */
   display: flex;
   align-items: end;
 }
-
-
-
-
-
 
 /* main */
 .page{
@@ -182,16 +170,16 @@ li {
   padding: 60px 80px;
 }
 
-/* Hero 區 */
+/* Hero */
 .hero {
   margin-bottom: 8rem;
 }
 .hero-inner {
-  display: grid;                     /* 使用 CSS Grid 排版 */
-  grid-template-columns: 1.2fr 1fr;  /* 分成兩欄，左邊比例 1.2，右邊比例 1 */
-  gap: 32px;                         /* 兩欄之間的間距 32px */
-  align-items: center;               /* 垂直方向置中對齊 */
-  padding: 30px 10px;                   /* 上下內距 30px，左右 10 */
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 30px 10px;
 }
 .hero h3 {  
   line-height: 1.5;
@@ -202,7 +190,6 @@ li {
 .hero p {
   color: var(--muted-text);
   line-height: 2.0;
-  /* width: 80%; */
 }
 
 /* 為什麼選擇我們 */
@@ -255,7 +242,6 @@ ul.slides {
 li.slide {
   width: 100%;
   flex-basis: 0% 1 0%;
-  /* flex: 1; */
   background: #cbcbcb;
   border-radius: 8px;
   box-sizing: border-box;
@@ -272,21 +258,6 @@ li.slide > img {
 li.slide > span {
   text-wrap: nowrap;
 }
-/* .slide:nth-of-type(1) {
-  background-color: #F2E205;
-}
-.slide:nth-of-type(2) {
-  background-color: #F25C05;
-  left: 100%;
-}
-.slide:nth-of-type(3) {
-  background-color: #495F8C;
-  left: 200%;
-} */
-
-
-
-
 
 /* footer */
 .footer-container {
@@ -310,7 +281,7 @@ li.slide > span {
 
 
 @media (max-width: 1200px) {
-  /* Hero 區 */
+  /* Hero */
   .hero h3 {  
     width: 100%;
     margin-bottom: 2rem;
