@@ -1,21 +1,16 @@
 // 選單開關
 document.addEventListener('DOMContentLoaded', () => {
 
-  // --- 1. 宣告 DOM 元素 (已移除 bodyEl 和滾動條計算) ---
   const toggleSwitches = document.querySelectorAll('.menu-toggle');
   const navMenu = document.getElementById('navbar-menu');
   const navbar = document.getElementById('navbar');
 
-  // --- 2. 選單開關邏輯 (移除 no-scroll 相關程式) ---
   if (toggleSwitches.length > 0 && navMenu && navbar) {
     toggleSwitches.forEach(switchBtn => {
       switchBtn.addEventListener('click', () => {
         
-        // 切換選單的 'on' 狀態
         navMenu.classList.toggle('on');
 
-        // 根據選單狀態，切換 navbar 的 'active'
-        // (這通常用於選單展開時，讓 navbar 保持可見，例如在透明狀態下)
         if (navMenu.classList.contains('on')) {
           navbar.classList.add('active');
         } else {
@@ -25,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 3. 頁面捲動邏輯 (保留) ---
   let lastScrollTop = 0;
   if (navbar) {
     window.addEventListener("scroll", () => {
@@ -72,7 +66,7 @@ function toggleFooterContent() {
   }
 }
 
-// 自動判斷是否在頁面底部
+// 判斷是否在頁面底部
 window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY;
   const windowHeight = window.innerHeight;

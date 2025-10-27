@@ -6,7 +6,7 @@ function getQueryParam(param) {
 
 const langFileMap = {
     'en': 'service_en.json',
-    'zh-TW': 'service.json' // 您也可以把 'zh-TW' 對應到同一個檔案
+    'zh-TW': 'service.json'
     // 'ja': 'service_jp.json' // japanese or something else..
 };
 const defaultLang = 'en';
@@ -74,11 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 監聽點擊事件
             serviceTabsContainer.addEventListener('click', (e) => {
-                // 點擊服務
-                // if (e.target.tagName === 'LI' && e.target.hasAttribute('data-service')) {
-                //     const serviceId = e.target.getAttribute('data-service');
-                //     handleServiceClick(serviceId, data);
-                // }
                 // 點擊服務標題
                 if (e.target.classList.contains('service-tab-text')) {
                     const parentLi = e.target.closest('.service-group');
@@ -96,10 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // ✅ 初始化第一個服務與第一個子服務
+            // 初始化第一個服務與第一個子服務
             handleServiceClick(data[0].id, data);
 
-            // ✅ 根據 URL 參數選取服務
+            // 根據 URL 參數選取服務
             const urlServiceId = getQueryParam('serviceId');
             const urlSubItemId = getQueryParam('subItemId');
 
@@ -118,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // ✅ 點擊服務時，顯示對應的子服務列表 & 預設選第一個子項
+    // 點擊服務時，顯示對應的子服務列表 & 預設選第一個子項
     function handleServiceClick(serviceId, data) {
         const serviceTabs = document.querySelectorAll('.service-tabs .service-group');
         const subserviceTabs = document.querySelectorAll('.subservice-tabs');
@@ -137,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (selectedSubItems) {
             selectedSubItems.classList.add('active');
 
-            // ✅ 自動選取第一個子服務
+            // 自動選取第一個子服務
             const firstSubItem = selectedSubItems.querySelector('li');
             if (firstSubItem) {
                 firstSubItem.classList.add('active');
@@ -147,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ✅ 顯示子服務內容
+    // 顯示子服務內容
     function handleSubItemClick(subItemId, data) {
         // 清除所有 active 子項
         document.querySelectorAll('.subservice-item.active').forEach(item => {
@@ -208,12 +203,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // gobacktotop
-// 1. 取得按鈕元素
 const scrollToTopBtn = document.getElementById("top");
 
-// 2. 監聽滾動事件
 window.onscroll = function() {
-    // 當頁面滾動超過 200px 時，顯示按鈕
+    // scroll > 200px
     if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 200) {
         scrollToTopBtn.style.display = "block";
     } else {
@@ -221,9 +214,7 @@ window.onscroll = function() {
     }
 };
 
-// 3. 監聽點擊事件
 scrollToTopBtn.addEventListener("click", function() {
-    // 讓頁面平滑地滾動回頂部
     window.scrollTo({
         top: 0,
         behavior: "smooth"
@@ -241,25 +232,17 @@ function switchVideo(videoKey, btn) {
         video5: "E6ooFsoI7Ys?si=WMCfQcdFjT3SMXEr"
     };
 
-    // 顯示影片區域，隱藏自訂內容
     document.getElementById("videoFrame").style.display = "block";
     document.getElementById("stickerFrame").style.display = "none";
-
     document.getElementById("videoFrame").src = `https://www.youtube.com/embed/${videoMap[videoKey]}`;
-  
-    // 移除所有按鈕的 active 類別
     document.querySelectorAll(".video-selector button").forEach(b => b.classList.remove("active"));
-    // 加上目前按下的按鈕 active 類別
+
     btn.classList.add("active");
 }
 function switchToSticker(btn) {
-    // 隱藏影片區域，顯示自訂內容
     document.getElementById("videoFrame").style.display = "none";
     document.getElementById("stickerFrame").style.display = "grid";
-
-    // 移除所有按鈕的 active 類別
     document.querySelectorAll(".video-selector button").forEach(b => b.classList.remove("active"));
-    // 加上目前按下的按鈕 active 類別
     btn.classList.add("active");
 }
 

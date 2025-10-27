@@ -18,6 +18,7 @@
     --text-color: var(--dark-text);
   }
 } */
+
 /* PC/Desktop */
 h1 { font-size: 48px; }
 h2 { font-size: 36px; }
@@ -276,9 +277,6 @@ li.slide > span {
 .footer-social a {
   font-size: small;
 }
-
-
-
 
 @media (max-width: 1200px) {
   /* Hero */

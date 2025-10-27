@@ -34,9 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Host       = 'smtp.jhengfong-tw.com';             // 你的 SMTP 伺服器 (例如: Gmail) -> 'smtp.gmail.com'
         $mail->SMTPAuth   = true;                         // 啟用 SMTP 驗證
         $mail->Username   = 'info@jhengfong-tw.com'; // 你的 SMTP 帳號
-        $mail->Password   = 'your_smtp_app_password';       // 你的應用程式密碼
+        $mail->Password   = 'your_smtp_app_password';       // 你的郵件密碼 / 應用程式密碼 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-------------------- 這裡要填
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;    // 使用 SSL/TLS 加密
-        $mail->Port       = 465;                            // SSL 端口通常是 465
+        $mail->Port       = 465;                            // SSL
         $mail->CharSet    = 'UTF-8';                        // 確保中文字元正常顯示
 
         // 設定寄件人（你的郵箱，不是填寫人的）
