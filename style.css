@@ -386,25 +386,25 @@ li {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+  width: fit-content;
 }
 .hero-text-1 h2 {
-  background: none;
   display: inline-block;
   margin-top: 1rem;
-
-  font-size: 4rem;
   font-size: 80px;
   font-weight: 600;
   transition: all 1s;
+  padding-bottom: 12px;
 }
 .hero-text-2 {
   display: flex;
   flex-direction: column;
+  width: fit-content;
   
   & h3 {
-    font-size: 3rem;
     font-size: 56px;
     margin-bottom: 1rem;
+    transition: all 1s;
   }
 }
 .hero-btns {
@@ -548,12 +548,12 @@ li {
 /* 打字動畫 */
 @keyframes typing {
   from { width: 0; }
-  to { width: var(--line-length); }
+  to { width: 100%; }
 }
 
 /* 游標閃爍 */
 @keyframes blink-caret {
-  50% { border-color: transparent; }
+  50% { border-color: var(--border-color); }
 }
 
 /* about */
@@ -634,6 +634,9 @@ li {
   font-size: 18px;
   margin: auto;
   letter-spacing: 2px;
+}
+:lang(en) .service-intro p {
+  /* letter-spacing: 0; */
 }
 .service-item-container {
   display: grid;
@@ -1492,8 +1495,28 @@ li {
 }
 
 
+.slide-up-wrapper {
+  overflow: hidden;
+}
+.slide-up-text {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+.slide-up-text.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
 
-
+.slide-up-block {
+  transform: translateY(20%);
+  opacity: 0;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+.slide-up-block.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
 
 
 

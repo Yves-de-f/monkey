@@ -258,10 +258,23 @@
                     </div>
                     <div class="information-r">
                         <div class="information">
-                            <a href="service_en.html#section3">Videos</a>
+                            <!-- <a href="service_en.html?video=video1#videoFrame">Videos</a> -->
+                            <a href="#videoFrame" onclick="switchVideo('video1', document.querySelector('[onclick*=video1]')); 
+                            document.getElementById('videoFrame').scrollIntoView({ behavior: 'smooth' 
+                            }); 
+                            return false;">Videos</a>
                         </div>
                         <div class="information">
-                            <a href="service_en.html#section3">Sticker display</a>
+                            <!-- <a href="service_en.html?video=sticker#section3-sticker">Sticker display</a> -->
+                            <a href="#stickerFrame" onclick="
+                                const stickerBtn = document.getElementById('section3-sticker');
+                                if (stickerBtn) {
+                                    switchToSticker('sticker', stickerBtn);
+                                    stickerBtn.scrollIntoView({ behavior: 'smooth'
+                                    });
+                                }
+                                return false;
+                            ">Sticker display</a>
                         </div>
                         <div class="information">
                             <a href="consumables_en.html">Consumables</a>

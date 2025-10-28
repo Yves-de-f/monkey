@@ -258,10 +258,21 @@
                 </div>
                 <div class="information-r">
                     <div class="information">
-                        <a href="#section3">影片</a>
+                        <a href="#videoFrame" onclick="switchVideo('video1', document.querySelector('[onclick*=video1]')); 
+                            document.getElementById('videoFrame').scrollIntoView({ behavior: 'smooth' 
+                            }); 
+                            return false;">影片</a>
                     </div>
                     <div class="information">
-                        <a href="#section3">貼紙展示</a>
+                        <a href="#stickerFrame" onclick="
+                                const stickerBtn = document.getElementById('section3-sticker');
+                                if (stickerBtn) {
+                                    switchToSticker('sticker', stickerBtn);
+                                    stickerBtn.scrollIntoView({ behavior: 'smooth'
+                                    });
+                                }
+                                return false;
+                            ">貼紙展示</a>
                     </div>
                     <div class="information">
                         <a href="consumables.html">耗材</a>

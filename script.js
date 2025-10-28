@@ -124,3 +124,17 @@ document.getElementById('contactForm').addEventListener('submit', function(event
             statusMessage.style.display = 'block';
         });
     });
+
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // 只觸發一次
+    }
+  });
+});
+
+document.querySelectorAll('.slide-up-text', '.slide-up-block').forEach(el => {
+  observer.observe(el);
+});
