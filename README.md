@@ -59,8 +59,8 @@ project-root/
 
 ### 使用 VS Code + Live Server
 
-1. 安裝 [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) 擴充套件  
-2. 在專案根目錄點右鍵 → 「Open with Live Server」  
+1. VS Code 安裝 [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) 擴充套件  
+2. 在 VS Code 開啟專案根目錄資料夾點視窗右下角 → 「Go Live」  
 
 ---
 
