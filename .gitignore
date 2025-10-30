@@ -1,0 +1,41 @@
+# 忽略 3_simulations/ 資料夾中的所有內容
+# 這是為了 Abaqus 的大型 .odb 檔和其他模擬輸出
+3_simulations/
+4_results/
+
+# Abaqus 產生的檔案
+*.odb
+*.log
+*.msg
+*.dat
+*.sta
+*.rec
+*.rpy
+*.prt
+*.com
+*.abq
+*.mdl
+
+# Fortran 編譯產生的檔案
+*.o
+*.mod
+*.exe
+*.out
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.ipynb_checkpoints
+
+# Matlab
+*.asv
+
+# macOS 系統檔案
+.DS_Store
+
+# Windows 系統檔案
+Thumbs.db
+
+# zip package
+*.zip
